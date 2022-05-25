@@ -1,0 +1,2 @@
+# TensorRT-Hackathon-Swin_Transformer
+TensorRT-Hackathon复赛项目，目标是针对使用TensorRT加速Swin_Transformer网络。
