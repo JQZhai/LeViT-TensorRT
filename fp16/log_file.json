@@ -1,0 +1,1187 @@
+[38;5;13m[V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util'][0m
+[38;5;13m[V] Model: ../LeViT-128S.onnx[0m
+[38;5;13m[V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy'][0m
+[38;5;14m[I] Starting iterations[0m
+[38;5;13m[V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt'][0m
+[38;5;14m[I] Using DataType.FLOAT as higher precision[0m
+[38;5;14m[I] RUNNING | Iteration 1 | Approximately 9 iteration(s) remaining[0m
+[I] Selecting first 369 layer(s) to run in higher precision
+[38;5;13m[V] Loaded Module: polygraphy.backend.trt.util[0m
+[38;5;13m[V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy'][0m
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 185, 186, 187, 188, 189, 190, 192, 194, 195, 196, 197, 198, 199, 201, 202, 203, 205, 206, 207, 208, 209, 210, 212, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 253, 254, 256, 257, 258, 259, 260, 261, 263, 264, 265, 267, 268, 269, 270, 271, 272, 274, 275, 277, 278, 279, 280, 281, 282, 284, 285, 286, 287, 288, 289, 290, 291, 292, 294, 295, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 308, 309, 310, 311, 312, 313, 315, 316, 318, 319, 320, 321, 322, 323, 325, 326, 327, 329, 330, 331, 332, 333, 334, 336, 337, 339, 340, 341, 342, 343, 344, 346, 347, 348, 349, 350, 351, 352, 353, 354, 356, 357, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 111.113 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:17:49] [TRT] [I] [MemUsageChange] Init CUDA: CPU +263, GPU +0, now: CPU 302, GPU 2767 (MiB)
+        [05/27/2022-07:17:49] [TRT] [I] Loaded engine size: 20 MiB
+        [05/27/2022-07:17:50] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 693, GPU 2969 (MiB)
+        [05/27/2022-07:17:50] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +116, GPU +52, now: CPU 809, GPU 3021 (MiB)
+        [05/27/2022-07:17:50] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +20, now: CPU 0, GPU 20 (MiB)
+        [05/27/2022-07:17:50] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3013 (MiB)
+        [05/27/2022-07:17:50] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3021 (MiB)
+        [05/27/2022-07:17:50] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +7, now: CPU 0, GPU 27 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:17:47     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:17:47    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:17:47    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:17:47     | Completed 1 iteration(s) in 831.5 ms | Average inference time: 831.5 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:17:47']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:17:47 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:17:47: output_0 | Stats: mean=0.025142, std-dev=1.2141, var=1.474, median=-0.0038071, min=-3.4492 at (0, 864), max=5.7969 at (0, 539), avg-magnitude=0.91812
+        [V]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.675) |        200 | ########################
+                        (-0.675, 0.249 ) |        321 | ########################################
+                        (0.249 , 1.17  ) |        278 | ##################################
+                        (1.17  , 2.1   ) |         75 | #########
+                        (2.1   , 3.02  ) |         34 | ####
+                        (3.02  , 3.95  ) |         11 | #
+                        (3.95  , 4.87  ) |          6 | 
+                        (4.87  , 5.8   ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [V]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.675) |        198 | ########################
+                        (-0.675, 0.249 ) |        323 | ########################################
+                        (0.249 , 1.17  ) |        278 | ##################################
+                        (1.17  , 2.1   ) |         75 | #########
+                        (2.1   , 3.02  ) |         34 | ####
+                        (3.02  , 3.95  ) |         11 | #
+                        (3.95  , 4.87  ) |          6 | 
+                        (4.87  , 5.8   ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.010018] OR [rel=1.1744] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0024464, std-dev=0.0018873, var=3.5619e-06, median=0.0021045, min=6.3032e-06 at (0, 17), max=0.010018 at (0, 892), avg-magnitude=0.0024464
+        [V]                 ---- Histogram ----
+                            Bin Range          |  Num Elems | Visualization
+                            (6.3e-06, 0.00101) |        259 | ########################################
+                            (0.00101, 0.00201) |        224 | ##################################
+                            (0.00201, 0.00301) |        194 | #############################
+                            (0.00301, 0.00401) |        130 | ####################
+                            (0.00401, 0.00501) |         87 | #############
+                            (0.00501, 0.00601) |         49 | #######
+                            (0.00601, 0.00701) |         30 | ####
+                            (0.00701, 0.00802) |         15 | ##
+                            (0.00802, 0.00902) |          9 | #
+                            (0.00902, 0.01   ) |          3 | 
+        [I]             Relative Difference | Stats: mean=0.011002, std-dev=0.055466, var=0.0030765, median=0.002715, min=6.6674e-06 at (0, 388), max=1.1744 at (0, 421), avg-magnitude=0.011002
+        [V]                 ---- Histogram ----
+                            Bin Range         |  Num Elems | Visualization
+                            (6.67e-06, 0.117) |        987 | ########################################
+                            (0.117   , 0.235) |          8 | 
+                            (0.235   , 0.352) |          0 | 
+                            (0.352   , 0.47 ) |          1 | 
+                            (0.47    , 0.587) |          1 | 
+                            (0.587   , 0.705) |          1 | 
+                            (0.705   , 0.822) |          1 | 
+                            (0.822   , 0.94 ) |          0 | 
+                            (0.94    , 1.06 ) |          0 | 
+                            (1.06    , 1.17 ) |          1 | 
+        [I]         PASSED | Difference is within tolerance (rel=0.01, abs=0.01)
+        [I]     PASSED | All outputs matched | Outputs: ['output_0']
+        [I] PASSED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[38;5;11m[W]     ========== CAPTURED STDERR ==========[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/good/polygraphy_debug_05-27-22_07-15-53_N1_ret0.engine
+[38;5;10m[I]     PASSED | Iteration 1[0m
+[38;5;14m[I] RUNNING | Iteration 2 | Approximately 8 iteration(s) remaining[0m
+[I] Selecting first 184 layer(s) to run in higher precision
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 31.561 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:18:27] [TRT] [I] [MemUsageChange] Init CUDA: CPU +263, GPU +0, now: CPU 299, GPU 2765 (MiB)
+        [05/27/2022-07:18:27] [TRT] [I] Loaded engine size: 18 MiB
+        [05/27/2022-07:18:27] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 690, GPU 2963 (MiB)
+        [05/27/2022-07:18:28] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +117, GPU +52, now: CPU 807, GPU 3015 (MiB)
+        [05/27/2022-07:18:28] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +17, now: CPU 0, GPU 17 (MiB)
+        [05/27/2022-07:18:28] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3007 (MiB)
+        [05/27/2022-07:18:28] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3015 (MiB)
+        [05/27/2022-07:18:28] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +7, now: CPU 0, GPU 24 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:18:25     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:18:25    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:18:25    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:18:25     | Completed 1 iteration(s) in 822.8 ms | Average inference time: 822.8 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:18:25']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:18:25 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:18:25: output_0 | Stats: mean=0.025028, std-dev=1.214, var=1.4739, median=-0.0051804, min=-3.4453 at (0, 864), max=5.8086 at (0, 539), avg-magnitude=0.91779
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.671) |        200 | ########################
+                        (-0.671, 0.255 ) |        322 | ########################################
+                        (0.255 , 1.18  ) |        277 | ##################################
+                        (1.18  , 2.11  ) |         76 | #########
+                        (2.11  , 3.03  ) |         33 | ####
+                        (3.03  , 3.96  ) |         11 | #
+                        (3.96  , 4.88  ) |          6 | 
+                        (4.88  , 5.81  ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.671) |        199 | ########################
+                        (-0.671, 0.255 ) |        322 | ########################################
+                        (0.255 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.11  ) |         76 | #########
+                        (2.11  , 3.03  ) |         33 | ####
+                        (3.03  , 3.96  ) |         11 | #
+                        (3.96  , 4.88  ) |          6 | 
+                        (4.88  , 5.81  ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.021984] OR [rel=1.7716] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0031099, std-dev=0.0024477, var=5.9915e-06, median=0.0025865, min=1.1921e-06 at (0, 946), max=0.021984 at (0, 588), avg-magnitude=0.0031099
+        [I]                 ---- Histogram ----
+                            Bin Range           |  Num Elems | Visualization
+                            (1.19e-06, 0.0022 ) |        437 | ########################################
+                            (0.0022  , 0.0044 ) |        318 | #############################
+                            (0.0044  , 0.0066 ) |        159 | ##############
+                            (0.0066  , 0.00879) |         62 | #####
+                            (0.00879 , 0.011  ) |         13 | #
+                            (0.011   , 0.0132 ) |          6 | 
+                            (0.0132  , 0.0154 ) |          2 | 
+                            (0.0154  , 0.0176 ) |          2 | 
+                            (0.0176  , 0.0198 ) |          0 | 
+                            (0.0198  , 0.022  ) |          1 | 
+        [I]             Relative Difference | Stats: mean=0.015008, std-dev=0.083246, var=0.0069299, median=0.0033806, min=1.2645e-06 at (0, 580), max=1.7716 at (0, 636), avg-magnitude=0.015008
+        [I]                 ---- Histogram ----
+                            Bin Range         |  Num Elems | Visualization
+                            (1.26e-06, 0.177) |        989 | ########################################
+                            (0.177   , 0.354) |          5 | 
+                            (0.354   , 0.531) |          1 | 
+                            (0.531   , 0.709) |          1 | 
+                            (0.709   , 0.886) |          1 | 
+                            (0.886   , 1.06 ) |          1 | 
+                            (1.06    , 1.24 ) |          0 | 
+                            (1.24    , 1.42 ) |          1 | 
+                            (1.42    , 1.59 ) |          0 | 
+                            (1.59    , 1.77 ) |          1 | 
+        [E]         FAILED | Difference exceeds tolerance (rel=0.01, abs=0.01)
+        [E]     FAILED | Mismatched outputs: ['output_0']
+[38;5;9m[E]     ========== CAPTURED STDERR ==========
+        [!] FAILED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/bad/polygraphy_debug_05-27-22_07-15-53_N2_ret1.engine
+[38;5;9m[E]     FAILED | Iteration 2[0m
+[38;5;14m[I] RUNNING | Iteration 3 | Approximately 7 iteration(s) remaining[0m
+[I] Selecting first 277 layer(s) to run in higher precision
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 185, 186, 187, 188, 189, 190, 192, 194, 195, 196, 197, 198, 199, 201, 202, 203, 205, 206, 207, 208, 209, 210, 212, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 253, 254, 256, 257, 258, 259, 260, 261, 263, 264, 265, 267, 268, 269, 270, 271, 272, 274, 275} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 30.679 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:19:04] [TRT] [I] [MemUsageChange] Init CUDA: CPU +263, GPU +0, now: CPU 301, GPU 2767 (MiB)
+        [05/27/2022-07:19:04] [TRT] [I] Loaded engine size: 19 MiB
+        [05/27/2022-07:19:05] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 692, GPU 2967 (MiB)
+        [05/27/2022-07:19:05] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +116, GPU +52, now: CPU 808, GPU 3019 (MiB)
+        [05/27/2022-07:19:05] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +18, now: CPU 0, GPU 18 (MiB)
+        [05/27/2022-07:19:05] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3011 (MiB)
+        [05/27/2022-07:19:05] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3019 (MiB)
+        [05/27/2022-07:19:05] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +8, now: CPU 0, GPU 26 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:19:02     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:19:02    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:19:02    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:19:02     | Completed 1 iteration(s) in 830 ms | Average inference time: 830 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:19:02']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:19:02 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:19:02: output_0 | Stats: mean=0.02523, std-dev=1.2136, var=1.4729, median=-0.0058594, min=-3.4473 at (0, 864), max=5.8008 at (0, 539), avg-magnitude=0.91769
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         62 | #######
+                        (-1.6  , -0.673) |        200 | ########################
+                        (-0.673, 0.252 ) |        322 | ########################################
+                        (0.252 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         75 | #########
+                        (2.1   , 3.03  ) |         34 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.673) |        199 | ########################
+                        (-0.673, 0.252 ) |        322 | ########################################
+                        (0.252 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.014946] OR [rel=0.77763] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0031831, std-dev=0.002466, var=6.0814e-06, median=0.0026902, min=9.7752e-06 at (0, 183), max=0.014946 at (0, 574), avg-magnitude=0.0031831
+        [I]                 ---- Histogram ----
+                            Bin Range           |  Num Elems | Visualization
+                            (9.78e-06, 0.0015 ) |        301 | ########################################
+                            (0.0015  , 0.003  ) |        241 | ################################
+                            (0.003   , 0.00449) |        200 | ##########################
+                            (0.00449 , 0.00598) |        118 | ###############
+                            (0.00598 , 0.00748) |         73 | #########
+                            (0.00748 , 0.00897) |         38 | #####
+                            (0.00897 , 0.0105 ) |         18 | ##
+                            (0.0105  , 0.012  ) |          6 | 
+                            (0.012   , 0.0135 ) |          4 | 
+                            (0.0135  , 0.0149 ) |          1 | 
+        [I]             Relative Difference | Stats: mean=0.01308, std-dev=0.047365, var=0.0022434, median=0.0036097, min=6.6674e-06 at (0, 388), max=0.77763 at (0, 991), avg-magnitude=0.01308
+        [I]                 ---- Histogram ----
+                            Bin Range          |  Num Elems | Visualization
+                            (6.67e-06, 0.0778) |        973 | ########################################
+                            (0.0778  , 0.156 ) |         16 | 
+                            (0.156   , 0.233 ) |          3 | 
+                            (0.233   , 0.311 ) |          3 | 
+                            (0.311   , 0.389 ) |          0 | 
+                            (0.389   , 0.467 ) |          1 | 
+                            (0.467   , 0.544 ) |          1 | 
+                            (0.544   , 0.622 ) |          1 | 
+                            (0.622   , 0.7   ) |          1 | 
+                            (0.7     , 0.778 ) |          1 | 
+        [E]         FAILED | Difference exceeds tolerance (rel=0.01, abs=0.01)
+        [E]     FAILED | Mismatched outputs: ['output_0']
+[38;5;9m[E]     ========== CAPTURED STDERR ==========
+        [!] FAILED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/bad/polygraphy_debug_05-27-22_07-15-53_N3_ret1.engine
+[38;5;9m[E]     FAILED | Iteration 3[0m
+[38;5;14m[I] RUNNING | Iteration 4 | Approximately 6 iteration(s) remaining[0m
+[I] Selecting first 323 layer(s) to run in higher precision
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 185, 186, 187, 188, 189, 190, 192, 194, 195, 196, 197, 198, 199, 201, 202, 203, 205, 206, 207, 208, 209, 210, 212, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 253, 254, 256, 257, 258, 259, 260, 261, 263, 264, 265, 267, 268, 269, 270, 271, 272, 274, 275, 277, 278, 279, 280, 281, 282, 284, 285, 286, 287, 288, 289, 290, 291, 292, 294, 295, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 308, 309, 310, 311, 312, 313, 315, 316, 318, 319, 320, 321, 322} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 30.104 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:19:41] [TRT] [I] [MemUsageChange] Init CUDA: CPU +262, GPU +0, now: CPU 301, GPU 2767 (MiB)
+        [05/27/2022-07:19:41] [TRT] [I] Loaded engine size: 20 MiB
+        [05/27/2022-07:19:41] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 693, GPU 2967 (MiB)
+        [05/27/2022-07:19:42] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +116, GPU +52, now: CPU 809, GPU 3019 (MiB)
+        [05/27/2022-07:19:42] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +19, now: CPU 0, GPU 19 (MiB)
+        [05/27/2022-07:19:42] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3011 (MiB)
+        [05/27/2022-07:19:42] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3019 (MiB)
+        [05/27/2022-07:19:42] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +8, now: CPU 0, GPU 27 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:19:39     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:19:39    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:19:39    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:19:39     | Completed 1 iteration(s) in 853.9 ms | Average inference time: 853.9 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:19:39']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:19:39 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:19:39: output_0 | Stats: mean=0.02511, std-dev=1.2138, var=1.4732, median=-0.0043259, min=-3.4453 at (0, 864), max=5.8047 at (0, 539), avg-magnitude=0.91773
+        [V]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.672) |        200 | ########################
+                        (-0.672, 0.253 ) |        322 | ########################################
+                        (0.253 , 1.18  ) |        277 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [V]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.672) |        199 | ########################
+                        (-0.672, 0.253 ) |        322 | ########################################
+                        (0.253 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.016627] OR [rel=0.64863] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0023654, std-dev=0.0018356, var=3.3696e-06, median=0.002014, min=3.8743e-06 at (0, 708), max=0.016627 at (0, 853), avg-magnitude=0.0023654
+        [V]                 ---- Histogram ----
+                            Bin Range           |  Num Elems | Visualization
+                            (3.87e-06, 0.00167) |        427 | ########################################
+                            (0.00167 , 0.00333) |        313 | #############################
+                            (0.00333 , 0.00499) |        183 | #################
+                            (0.00499 , 0.00665) |         53 | ####
+                            (0.00665 , 0.00832) |         15 | #
+                            (0.00832 , 0.00998) |          7 | 
+                            (0.00998 , 0.0116 ) |          0 | 
+                            (0.0116  , 0.0133 ) |          1 | 
+                            (0.0133  , 0.015  ) |          0 | 
+                            (0.015   , 0.0166 ) |          1 | 
+        [I]             Relative Difference | Stats: mean=0.0097814, std-dev=0.035496, var=0.00126, median=0.0026992, min=2.7479e-06 at (0, 550), max=0.64863 at (0, 504), avg-magnitude=0.0097814
+        [V]                 ---- Histogram ----
+                            Bin Range          |  Num Elems | Visualization
+                            (2.75e-06, 0.0649) |        977 | ########################################
+                            (0.0649  , 0.13  ) |         12 | 
+                            (0.13    , 0.195 ) |          4 | 
+                            (0.195   , 0.259 ) |          2 | 
+                            (0.259   , 0.324 ) |          1 | 
+                            (0.324   , 0.389 ) |          1 | 
+                            (0.389   , 0.454 ) |          2 | 
+                            (0.454   , 0.519 ) |          0 | 
+                            (0.519   , 0.584 ) |          0 | 
+                            (0.584   , 0.649 ) |          1 | 
+        [I]         PASSED | Difference is within tolerance (rel=0.01, abs=0.01)
+        [I]     PASSED | All outputs matched | Outputs: ['output_0']
+        [I] PASSED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[38;5;11m[W]     ========== CAPTURED STDERR ==========[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/good/polygraphy_debug_05-27-22_07-15-53_N4_ret0.engine
+[38;5;10m[I]     PASSED | Iteration 4[0m
+[38;5;14m[I] RUNNING | Iteration 5 | Approximately 5 iteration(s) remaining[0m
+[I] Selecting first 300 layer(s) to run in higher precision
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 185, 186, 187, 188, 189, 190, 192, 194, 195, 196, 197, 198, 199, 201, 202, 203, 205, 206, 207, 208, 209, 210, 212, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 253, 254, 256, 257, 258, 259, 260, 261, 263, 264, 265, 267, 268, 269, 270, 271, 272, 274, 275, 277, 278, 279, 280, 281, 282, 284, 285, 286, 287, 288, 289, 290, 291, 292, 294, 295, 297, 298, 299} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 31.982 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:20:19] [TRT] [I] [MemUsageChange] Init CUDA: CPU +263, GPU +0, now: CPU 301, GPU 2767 (MiB)
+        [05/27/2022-07:20:19] [TRT] [I] Loaded engine size: 20 MiB
+        [05/27/2022-07:20:20] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 692, GPU 2967 (MiB)
+        [05/27/2022-07:20:20] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +116, GPU +52, now: CPU 808, GPU 3019 (MiB)
+        [05/27/2022-07:20:20] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +19, now: CPU 0, GPU 19 (MiB)
+        [05/27/2022-07:20:20] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3011 (MiB)
+        [05/27/2022-07:20:20] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3019 (MiB)
+        [05/27/2022-07:20:20] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +7, now: CPU 0, GPU 26 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:20:18     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:20:18    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:20:18    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:20:18     | Completed 1 iteration(s) in 834.8 ms | Average inference time: 834.8 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:20:18']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:20:18 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:20:18: output_0 | Stats: mean=0.025146, std-dev=1.2141, var=1.474, median=-0.0033875, min=-3.4531 at (0, 864), max=5.8086 at (0, 539), avg-magnitude=0.91806
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.53 ) |         10 | #
+                        (-2.53 , -1.6  ) |         62 | #######
+                        (-1.6  , -0.675) |        200 | ########################
+                        (-0.675, 0.252 ) |        322 | ########################################
+                        (0.252 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.96  ) |         11 | #
+                        (3.96  , 4.88  ) |          6 | 
+                        (4.88  , 5.81  ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.53 ) |          9 | #
+                        (-2.53 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.675) |        200 | ########################
+                        (-0.675, 0.252 ) |        322 | ########################################
+                        (0.252 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.96  ) |         11 | #
+                        (3.96  , 4.88  ) |          6 | 
+                        (4.88  , 5.81  ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.020533] OR [rel=0.96475] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0025988, std-dev=0.0021713, var=4.7147e-06, median=0.0021167, min=1.5497e-06 at (0, 580), max=0.020533 at (0, 853), avg-magnitude=0.0025988
+        [I]                 ---- Histogram ----
+                            Bin Range           |  Num Elems | Visualization
+                            (1.55e-06, 0.00205) |        490 | ########################################
+                            (0.00205 , 0.00411) |        306 | ########################
+                            (0.00411 , 0.00616) |        137 | ###########
+                            (0.00616 , 0.00821) |         52 | ####
+                            (0.00821 , 0.0103 ) |          8 | 
+                            (0.0103  , 0.0123 ) |          4 | 
+                            (0.0123  , 0.0144 ) |          1 | 
+                            (0.0144  , 0.0164 ) |          0 | 
+                            (0.0164  , 0.0185 ) |          1 | 
+                            (0.0185  , 0.0205 ) |          1 | 
+        [I]             Relative Difference | Stats: mean=0.01189, std-dev=0.057642, var=0.0033225, median=0.0028928, min=1.2645e-06 at (0, 580), max=0.96475 at (0, 541), avg-magnitude=0.01189
+        [I]                 ---- Histogram ----
+                            Bin Range          |  Num Elems | Visualization
+                            (1.26e-06, 0.0965) |        982 | ########################################
+                            (0.0965  , 0.193 ) |         10 | 
+                            (0.193   , 0.289 ) |          2 | 
+                            (0.289   , 0.386 ) |          0 | 
+                            (0.386   , 0.482 ) |          1 | 
+                            (0.482   , 0.579 ) |          0 | 
+                            (0.579   , 0.675 ) |          1 | 
+                            (0.675   , 0.772 ) |          2 | 
+                            (0.772   , 0.868 ) |          1 | 
+                            (0.868   , 0.965 ) |          1 | 
+        [E]         FAILED | Difference exceeds tolerance (rel=0.01, abs=0.01)
+        [E]     FAILED | Mismatched outputs: ['output_0']
+[38;5;9m[E]     ========== CAPTURED STDERR ==========
+        [!] FAILED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/bad/polygraphy_debug_05-27-22_07-15-53_N5_ret1.engine
+[38;5;9m[E]     FAILED | Iteration 5[0m
+[38;5;14m[I] RUNNING | Iteration 6 | Approximately 4 iteration(s) remaining[0m
+[I] Selecting first 312 layer(s) to run in higher precision
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 185, 186, 187, 188, 189, 190, 192, 194, 195, 196, 197, 198, 199, 201, 202, 203, 205, 206, 207, 208, 209, 210, 212, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 253, 254, 256, 257, 258, 259, 260, 261, 263, 264, 265, 267, 268, 269, 270, 271, 272, 274, 275, 277, 278, 279, 280, 281, 282, 284, 285, 286, 287, 288, 289, 290, 291, 292, 294, 295, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 308, 309, 310, 311} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 32.246 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:20:58] [TRT] [I] [MemUsageChange] Init CUDA: CPU +263, GPU +0, now: CPU 301, GPU 2767 (MiB)
+        [05/27/2022-07:20:58] [TRT] [I] Loaded engine size: 20 MiB
+        [05/27/2022-07:20:59] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 692, GPU 2967 (MiB)
+        [05/27/2022-07:20:59] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +116, GPU +52, now: CPU 808, GPU 3019 (MiB)
+        [05/27/2022-07:20:59] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +19, now: CPU 0, GPU 19 (MiB)
+        [05/27/2022-07:20:59] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3011 (MiB)
+        [05/27/2022-07:20:59] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3019 (MiB)
+        [05/27/2022-07:20:59] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +7, now: CPU 0, GPU 26 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:20:57     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:20:57    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:20:57    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:20:57     | Completed 1 iteration(s) in 875.4 ms | Average inference time: 875.4 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:20:57']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:20:57 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:20:57: output_0 | Stats: mean=0.025146, std-dev=1.2141, var=1.474, median=-0.0033875, min=-3.4531 at (0, 864), max=5.8086 at (0, 539), avg-magnitude=0.91806
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.53 ) |         10 | #
+                        (-2.53 , -1.6  ) |         62 | #######
+                        (-1.6  , -0.675) |        200 | ########################
+                        (-0.675, 0.252 ) |        322 | ########################################
+                        (0.252 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.96  ) |         11 | #
+                        (3.96  , 4.88  ) |          6 | 
+                        (4.88  , 5.81  ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.53 ) |          9 | #
+                        (-2.53 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.675) |        200 | ########################
+                        (-0.675, 0.252 ) |        322 | ########################################
+                        (0.252 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.96  ) |         11 | #
+                        (3.96  , 4.88  ) |          6 | 
+                        (4.88  , 5.81  ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.020533] OR [rel=0.96475] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0025988, std-dev=0.0021713, var=4.7147e-06, median=0.0021167, min=1.5497e-06 at (0, 580), max=0.020533 at (0, 853), avg-magnitude=0.0025988
+        [I]                 ---- Histogram ----
+                            Bin Range           |  Num Elems | Visualization
+                            (1.55e-06, 0.00205) |        490 | ########################################
+                            (0.00205 , 0.00411) |        306 | ########################
+                            (0.00411 , 0.00616) |        137 | ###########
+                            (0.00616 , 0.00821) |         52 | ####
+                            (0.00821 , 0.0103 ) |          8 | 
+                            (0.0103  , 0.0123 ) |          4 | 
+                            (0.0123  , 0.0144 ) |          1 | 
+                            (0.0144  , 0.0164 ) |          0 | 
+                            (0.0164  , 0.0185 ) |          1 | 
+                            (0.0185  , 0.0205 ) |          1 | 
+        [I]             Relative Difference | Stats: mean=0.01189, std-dev=0.057642, var=0.0033225, median=0.0028928, min=1.2645e-06 at (0, 580), max=0.96475 at (0, 541), avg-magnitude=0.01189
+        [I]                 ---- Histogram ----
+                            Bin Range          |  Num Elems | Visualization
+                            (1.26e-06, 0.0965) |        982 | ########################################
+                            (0.0965  , 0.193 ) |         10 | 
+                            (0.193   , 0.289 ) |          2 | 
+                            (0.289   , 0.386 ) |          0 | 
+                            (0.386   , 0.482 ) |          1 | 
+                            (0.482   , 0.579 ) |          0 | 
+                            (0.579   , 0.675 ) |          1 | 
+                            (0.675   , 0.772 ) |          2 | 
+                            (0.772   , 0.868 ) |          1 | 
+                            (0.868   , 0.965 ) |          1 | 
+        [E]         FAILED | Difference exceeds tolerance (rel=0.01, abs=0.01)
+        [E]     FAILED | Mismatched outputs: ['output_0']
+[38;5;9m[E]     ========== CAPTURED STDERR ==========
+        [!] FAILED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/bad/polygraphy_debug_05-27-22_07-15-53_N6_ret1.engine
+[38;5;9m[E]     FAILED | Iteration 6[0m
+[38;5;14m[I] RUNNING | Iteration 7 | Approximately 3 iteration(s) remaining[0m
+[I] Selecting first 318 layer(s) to run in higher precision
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 185, 186, 187, 188, 189, 190, 192, 194, 195, 196, 197, 198, 199, 201, 202, 203, 205, 206, 207, 208, 209, 210, 212, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 253, 254, 256, 257, 258, 259, 260, 261, 263, 264, 265, 267, 268, 269, 270, 271, 272, 274, 275, 277, 278, 279, 280, 281, 282, 284, 285, 286, 287, 288, 289, 290, 291, 292, 294, 295, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 308, 309, 310, 311, 312, 313, 315, 316} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 31.515 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:21:36] [TRT] [I] [MemUsageChange] Init CUDA: CPU +263, GPU +0, now: CPU 301, GPU 2767 (MiB)
+        [05/27/2022-07:21:36] [TRT] [I] Loaded engine size: 20 MiB
+        [05/27/2022-07:21:37] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 692, GPU 2967 (MiB)
+        [05/27/2022-07:21:37] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +116, GPU +52, now: CPU 808, GPU 3019 (MiB)
+        [05/27/2022-07:21:37] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +19, now: CPU 0, GPU 19 (MiB)
+        [05/27/2022-07:21:37] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3011 (MiB)
+        [05/27/2022-07:21:37] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3019 (MiB)
+        [05/27/2022-07:21:37] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +7, now: CPU 0, GPU 26 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:21:35     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:21:35    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:21:35    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:21:35     | Completed 1 iteration(s) in 850.5 ms | Average inference time: 850.5 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:21:35']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:21:35 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:21:35: output_0 | Stats: mean=0.025122, std-dev=1.214, var=1.4738, median=-0.0060349, min=-3.4473 at (0, 864), max=5.8125 at (0, 539), avg-magnitude=0.91797
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.669) |        200 | ########################
+                        (-0.669, 0.257 ) |        324 | ########################################
+                        (0.257 , 1.18  ) |        275 | #################################
+                        (1.18  , 2.11  ) |         76 | #########
+                        (2.11  , 3.03  ) |         33 | ####
+                        (3.03  , 3.96  ) |         11 | #
+                        (3.96  , 4.89  ) |          6 | 
+                        (4.89  , 5.81  ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.669) |        200 | ########################
+                        (-0.669, 0.257 ) |        322 | ########################################
+                        (0.257 , 1.18  ) |        277 | ##################################
+                        (1.18  , 2.11  ) |         76 | #########
+                        (2.11  , 3.03  ) |         33 | ####
+                        (3.03  , 3.96  ) |         11 | #
+                        (3.96  , 4.89  ) |          6 | 
+                        (4.89  , 5.81  ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.020875] OR [rel=1.8938] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0025605, std-dev=0.0020425, var=4.1717e-06, median=0.0021309, min=6.1989e-06 at (0, 550), max=0.020875 at (0, 539), avg-magnitude=0.0025605
+        [I]                 ---- Histogram ----
+                            Bin Range          |  Num Elems | Visualization
+                            (6.2e-06, 0.00209) |        493 | ########################################
+                            (0.00209, 0.00418) |        318 | #########################
+                            (0.00418, 0.00627) |        136 | ###########
+                            (0.00627, 0.00835) |         41 | ###
+                            (0.00835, 0.0104 ) |          9 | 
+                            (0.0104 , 0.0125 ) |          2 | 
+                            (0.0125 , 0.0146 ) |          0 | 
+                            (0.0146 , 0.0167 ) |          0 | 
+                            (0.0167 , 0.0188 ) |          0 | 
+                            (0.0188 , 0.0209 ) |          1 | 
+        [I]             Relative Difference | Stats: mean=0.012556, std-dev=0.084171, var=0.0070847, median=0.0028776, min=2.7479e-06 at (0, 550), max=1.8938 at (0, 421), avg-magnitude=0.012556
+        [I]                 ---- Histogram ----
+                            Bin Range         |  Num Elems | Visualization
+                            (2.75e-06, 0.189) |        993 | ########################################
+                            (0.189   , 0.379) |          2 | 
+                            (0.379   , 0.568) |          3 | 
+                            (0.568   , 0.758) |          0 | 
+                            (0.758   , 0.947) |          0 | 
+                            (0.947   , 1.14 ) |          0 | 
+                            (1.14    , 1.33 ) |          0 | 
+                            (1.33    , 1.52 ) |          0 | 
+                            (1.52    , 1.7  ) |          1 | 
+                            (1.7     , 1.89 ) |          1 | 
+        [E]         FAILED | Difference exceeds tolerance (rel=0.01, abs=0.01)
+        [E]     FAILED | Mismatched outputs: ['output_0']
+[38;5;9m[E]     ========== CAPTURED STDERR ==========
+        [!] FAILED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/bad/polygraphy_debug_05-27-22_07-15-53_N7_ret1.engine
+[38;5;9m[E]     FAILED | Iteration 7[0m
+[38;5;14m[I] RUNNING | Iteration 8 | Approximately 2 iteration(s) remaining[0m
+[I] Selecting first 321 layer(s) to run in higher precision
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 185, 186, 187, 188, 189, 190, 192, 194, 195, 196, 197, 198, 199, 201, 202, 203, 205, 206, 207, 208, 209, 210, 212, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 253, 254, 256, 257, 258, 259, 260, 261, 263, 264, 265, 267, 268, 269, 270, 271, 272, 274, 275, 277, 278, 279, 280, 281, 282, 284, 285, 286, 287, 288, 289, 290, 291, 292, 294, 295, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 308, 309, 310, 311, 312, 313, 315, 316, 318, 319, 320} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 31.241 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:22:14] [TRT] [I] [MemUsageChange] Init CUDA: CPU +262, GPU +0, now: CPU 301, GPU 2767 (MiB)
+        [05/27/2022-07:22:14] [TRT] [I] Loaded engine size: 20 MiB
+        [05/27/2022-07:22:15] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 693, GPU 2967 (MiB)
+        [05/27/2022-07:22:15] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +116, GPU +52, now: CPU 809, GPU 3019 (MiB)
+        [05/27/2022-07:22:15] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +19, now: CPU 0, GPU 19 (MiB)
+        [05/27/2022-07:22:15] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3011 (MiB)
+        [05/27/2022-07:22:15] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3019 (MiB)
+        [05/27/2022-07:22:15] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +8, now: CPU 0, GPU 27 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:22:13     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:22:13    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:22:13    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:22:13     | Completed 1 iteration(s) in 905.9 ms | Average inference time: 905.9 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:22:13']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:22:13 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:22:13: output_0 | Stats: mean=0.02511, std-dev=1.2138, var=1.4732, median=-0.0043259, min=-3.4453 at (0, 864), max=5.8047 at (0, 539), avg-magnitude=0.91773
+        [V]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.672) |        200 | ########################
+                        (-0.672, 0.253 ) |        322 | ########################################
+                        (0.253 , 1.18  ) |        277 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [V]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.672) |        199 | ########################
+                        (-0.672, 0.253 ) |        322 | ########################################
+                        (0.253 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.016627] OR [rel=0.64863] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0023654, std-dev=0.0018356, var=3.3696e-06, median=0.002014, min=3.8743e-06 at (0, 708), max=0.016627 at (0, 853), avg-magnitude=0.0023654
+        [V]                 ---- Histogram ----
+                            Bin Range           |  Num Elems | Visualization
+                            (3.87e-06, 0.00167) |        427 | ########################################
+                            (0.00167 , 0.00333) |        313 | #############################
+                            (0.00333 , 0.00499) |        183 | #################
+                            (0.00499 , 0.00665) |         53 | ####
+                            (0.00665 , 0.00832) |         15 | #
+                            (0.00832 , 0.00998) |          7 | 
+                            (0.00998 , 0.0116 ) |          0 | 
+                            (0.0116  , 0.0133 ) |          1 | 
+                            (0.0133  , 0.015  ) |          0 | 
+                            (0.015   , 0.0166 ) |          1 | 
+        [I]             Relative Difference | Stats: mean=0.0097814, std-dev=0.035496, var=0.00126, median=0.0026992, min=2.7479e-06 at (0, 550), max=0.64863 at (0, 504), avg-magnitude=0.0097814
+        [V]                 ---- Histogram ----
+                            Bin Range          |  Num Elems | Visualization
+                            (2.75e-06, 0.0649) |        977 | ########################################
+                            (0.0649  , 0.13  ) |         12 | 
+                            (0.13    , 0.195 ) |          4 | 
+                            (0.195   , 0.259 ) |          2 | 
+                            (0.259   , 0.324 ) |          1 | 
+                            (0.324   , 0.389 ) |          1 | 
+                            (0.389   , 0.454 ) |          2 | 
+                            (0.454   , 0.519 ) |          0 | 
+                            (0.519   , 0.584 ) |          0 | 
+                            (0.584   , 0.649 ) |          1 | 
+        [I]         PASSED | Difference is within tolerance (rel=0.01, abs=0.01)
+        [I]     PASSED | All outputs matched | Outputs: ['output_0']
+        [I] PASSED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[38;5;11m[W]     ========== CAPTURED STDERR ==========[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/good/polygraphy_debug_05-27-22_07-15-53_N8_ret0.engine
+[38;5;10m[I]     PASSED | Iteration 8[0m
+[38;5;14m[I] RUNNING | Iteration 9 | Approximately 1 iteration(s) remaining[0m
+[I] Selecting first 319 layer(s) to run in higher precision
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 185, 186, 187, 188, 189, 190, 192, 194, 195, 196, 197, 198, 199, 201, 202, 203, 205, 206, 207, 208, 209, 210, 212, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 253, 254, 256, 257, 258, 259, 260, 261, 263, 264, 265, 267, 268, 269, 270, 271, 272, 274, 275, 277, 278, 279, 280, 281, 282, 284, 285, 286, 287, 288, 289, 290, 291, 292, 294, 295, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 308, 309, 310, 311, 312, 313, 315, 316, 318} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 32.217 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:22:53] [TRT] [I] [MemUsageChange] Init CUDA: CPU +263, GPU +0, now: CPU 301, GPU 2767 (MiB)
+        [05/27/2022-07:22:53] [TRT] [I] Loaded engine size: 20 MiB
+        [05/27/2022-07:22:54] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 692, GPU 2967 (MiB)
+        [05/27/2022-07:22:54] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +116, GPU +52, now: CPU 808, GPU 3019 (MiB)
+        [05/27/2022-07:22:54] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +19, now: CPU 0, GPU 19 (MiB)
+        [05/27/2022-07:22:54] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3011 (MiB)
+        [05/27/2022-07:22:54] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3019 (MiB)
+        [05/27/2022-07:22:54] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +12, now: CPU 0, GPU 31 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:22:52     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:22:52    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:22:52    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:22:52     | Completed 1 iteration(s) in 813 ms | Average inference time: 813 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:22:52']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:22:52 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:22:52: output_0 | Stats: mean=0.025147, std-dev=1.214, var=1.4738, median=-0.005455, min=-3.4473 at (0, 864), max=5.8047 at (0, 539), avg-magnitude=0.91805
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.672) |        200 | ########################
+                        (-0.672, 0.253 ) |        321 | ########################################
+                        (0.253 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.672) |        199 | ########################
+                        (-0.672, 0.253 ) |        322 | ########################################
+                        (0.253 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.013062] OR [rel=1.1823] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0028163, std-dev=0.0021569, var=4.6524e-06, median=0.0023555, min=3.3975e-06 at (0, 145), max=0.013062 at (0, 539), avg-magnitude=0.0028163
+        [I]                 ---- Histogram ----
+                            Bin Range          |  Num Elems | Visualization
+                            (3.4e-06, 0.00131) |        286 | ########################################
+                            (0.00131, 0.00262) |        267 | #####################################
+                            (0.00262, 0.00392) |        192 | ##########################
+                            (0.00392, 0.00523) |        120 | ################
+                            (0.00523, 0.00653) |         72 | ##########
+                            (0.00653, 0.00784) |         32 | ####
+                            (0.00784, 0.00914) |         17 | ##
+                            (0.00914, 0.0105 ) |          7 | 
+                            (0.0105 , 0.0118 ) |          3 | 
+                            (0.0118 , 0.0131 ) |          4 | 
+        [I]             Relative Difference | Stats: mean=0.013346, std-dev=0.07066, var=0.0049928, median=0.0031878, min=2.7479e-06 at (0, 550), max=1.1823 at (0, 504), avg-magnitude=0.013346
+        [I]                 ---- Histogram ----
+                            Bin Range         |  Num Elems | Visualization
+                            (2.75e-06, 0.118) |        988 | ########################################
+                            (0.118   , 0.236) |          6 | 
+                            (0.236   , 0.355) |          0 | 
+                            (0.355   , 0.473) |          2 | 
+                            (0.473   , 0.591) |          0 | 
+                            (0.591   , 0.709) |          0 | 
+                            (0.709   , 0.828) |          0 | 
+                            (0.828   , 0.946) |          0 | 
+                            (0.946   , 1.06 ) |          3 | 
+                            (1.06    , 1.18 ) |          1 | 
+        [E]         FAILED | Difference exceeds tolerance (rel=0.01, abs=0.01)
+        [E]     FAILED | Mismatched outputs: ['output_0']
+[38;5;9m[E]     ========== CAPTURED STDERR ==========
+        [!] FAILED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/bad/polygraphy_debug_05-27-22_07-15-53_N9_ret1.engine
+[38;5;9m[E]     FAILED | Iteration 9[0m
+[38;5;14m[I] RUNNING | Iteration 10 | Approximately 0 iteration(s) remaining[0m
+[I] Selecting first 320 layer(s) to run in higher precision
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 185, 186, 187, 188, 189, 190, 192, 194, 195, 196, 197, 198, 199, 201, 202, 203, 205, 206, 207, 208, 209, 210, 212, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 253, 254, 256, 257, 258, 259, 260, 261, 263, 264, 265, 267, 268, 269, 270, 271, 272, 274, 275, 277, 278, 279, 280, 281, 282, 284, 285, 286, 287, 288, 289, 290, 291, 292, 294, 295, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 308, 309, 310, 311, 312, 313, 315, 316, 318, 319} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 31.850 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:23:31] [TRT] [I] [MemUsageChange] Init CUDA: CPU +262, GPU +0, now: CPU 301, GPU 2767 (MiB)
+        [05/27/2022-07:23:31] [TRT] [I] Loaded engine size: 20 MiB
+        [05/27/2022-07:23:32] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 693, GPU 2967 (MiB)
+        [05/27/2022-07:23:33] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +116, GPU +52, now: CPU 809, GPU 3019 (MiB)
+        [05/27/2022-07:23:33] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +19, now: CPU 0, GPU 19 (MiB)
+        [05/27/2022-07:23:33] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3011 (MiB)
+        [05/27/2022-07:23:33] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3019 (MiB)
+        [05/27/2022-07:23:33] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +8, now: CPU 0, GPU 27 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:23:30     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:23:30    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:23:30    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:23:30     | Completed 1 iteration(s) in 862.7 ms | Average inference time: 862.7 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:23:30']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:23:30 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:23:30: output_0 | Stats: mean=0.02511, std-dev=1.2138, var=1.4732, median=-0.0043259, min=-3.4453 at (0, 864), max=5.8047 at (0, 539), avg-magnitude=0.91773
+        [V]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.672) |        200 | ########################
+                        (-0.672, 0.253 ) |        322 | ########################################
+                        (0.253 , 1.18  ) |        277 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [V]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.672) |        199 | ########################
+                        (-0.672, 0.253 ) |        322 | ########################################
+                        (0.253 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.016627] OR [rel=0.64863] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0023654, std-dev=0.0018356, var=3.3696e-06, median=0.002014, min=3.8743e-06 at (0, 708), max=0.016627 at (0, 853), avg-magnitude=0.0023654
+        [V]                 ---- Histogram ----
+                            Bin Range           |  Num Elems | Visualization
+                            (3.87e-06, 0.00167) |        427 | ########################################
+                            (0.00167 , 0.00333) |        313 | #############################
+                            (0.00333 , 0.00499) |        183 | #################
+                            (0.00499 , 0.00665) |         53 | ####
+                            (0.00665 , 0.00832) |         15 | #
+                            (0.00832 , 0.00998) |          7 | 
+                            (0.00998 , 0.0116 ) |          0 | 
+                            (0.0116  , 0.0133 ) |          1 | 
+                            (0.0133  , 0.015  ) |          0 | 
+                            (0.015   , 0.0166 ) |          1 | 
+        [I]             Relative Difference | Stats: mean=0.0097814, std-dev=0.035496, var=0.00126, median=0.0026992, min=2.7479e-06 at (0, 550), max=0.64863 at (0, 504), avg-magnitude=0.0097814
+        [V]                 ---- Histogram ----
+                            Bin Range          |  Num Elems | Visualization
+                            (2.75e-06, 0.0649) |        977 | ########################################
+                            (0.0649  , 0.13  ) |         12 | 
+                            (0.13    , 0.195 ) |          4 | 
+                            (0.195   , 0.259 ) |          2 | 
+                            (0.259   , 0.324 ) |          1 | 
+                            (0.324   , 0.389 ) |          1 | 
+                            (0.389   , 0.454 ) |          2 | 
+                            (0.454   , 0.519 ) |          0 | 
+                            (0.519   , 0.584 ) |          0 | 
+                            (0.584   , 0.649 ) |          1 | 
+        [I]         PASSED | Difference is within tolerance (rel=0.01, abs=0.01)
+        [I]     PASSED | All outputs matched | Outputs: ['output_0']
+        [I] PASSED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[38;5;11m[W]     ========== CAPTURED STDERR ==========[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/good/polygraphy_debug_05-27-22_07-15-53_N10_ret0.engine
+[38;5;10m[I]     PASSED | Iteration 10[0m
+[38;5;14m[I] RUNNING | Iteration 11 | Approximately 0 iteration(s) remaining[0m
+[I] Selecting first 319 layer(s) to run in higher precision
+[38;5;13m[V] Marking layer(s): {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 55, 56, 58, 59, 60, 61, 62, 63, 65, 66, 67, 69, 70, 71, 72, 73, 74, 76, 77, 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 117, 118, 120, 121, 122, 123, 124, 125, 127, 128, 129, 131, 132, 133, 134, 135, 136, 138, 139, 141, 142, 143, 144, 145, 146, 148, 149, 150, 151, 152, 153, 154, 155, 156, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 169, 171, 172, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 185, 186, 187, 188, 189, 190, 192, 194, 195, 196, 197, 198, 199, 201, 202, 203, 205, 206, 207, 208, 209, 210, 212, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 253, 254, 256, 257, 258, 259, 260, 261, 263, 264, 265, 267, 268, 269, 270, 271, 272, 274, 275, 277, 278, 279, 280, 281, 282, 284, 285, 286, 287, 288, 289, 290, 291, 292, 294, 295, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 308, 309, 310, 311, 312, 313, 315, 316, 318} to run in DataType.FLOAT precision[0m
+[38;5;13m[V] Builder and Network were provided directly instead of via a Callable. This loader will not assume ownership. Please ensure that they are freed.[0m
+[38;5;13m[V]     Setting TensorRT Optimization Profiles[0m
+[38;5;13m[V]     Input tensor: input_0 (dtype=DataType.FLOAT, shape=(1, 3, 224, 224)) | Setting input tensor shapes to: (min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])[0m
+[I]     Configuring with profiles: [Profile().add(input_0, min=[1, 3, 224, 224], opt=[1, 3, 224, 224], max=[1, 3, 224, 224])]
+[38;5;14m[I] Building engine with configuration:
+    Workspace            | 30064771072 bytes (28672.00 MiB)
+    Precision            | TF32: False, FP16: True, INT8: False, Obey Precision Constraints: True, Strict Types: False
+    Tactic Sources       | ['CUBLAS', 'CUBLAS_LT', 'CUDNN']
+    Safety Restricted    | False
+    Profiles             | 1 profile(s)[0m
+[38;5;10m[I] Finished engine building in 30.574 seconds[0m
+[I] Saving engine to polygraphy_debug.engine
+[I]     Running check command: polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2
+[I]     ========== CAPTURED STDOUT ==========
+        [05/27/2022-07:24:09] [TRT] [I] [MemUsageChange] Init CUDA: CPU +263, GPU +0, now: CPU 301, GPU 2765 (MiB)
+        [05/27/2022-07:24:09] [TRT] [I] Loaded engine size: 20 MiB
+        [05/27/2022-07:24:09] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +387, GPU +180, now: CPU 692, GPU 2965 (MiB)
+        [05/27/2022-07:24:10] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +116, GPU +52, now: CPU 808, GPU 3017 (MiB)
+        [05/27/2022-07:24:10] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +19, now: CPU 0, GPU 19 (MiB)
+        [05/27/2022-07:24:10] [TRT] [I] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 788, GPU 3009 (MiB)
+        [05/27/2022-07:24:10] [TRT] [I] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 788, GPU 3017 (MiB)
+        [05/27/2022-07:24:10] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +12, now: CPU 0, GPU 31 (MiB)
+        [V] Loaded Module: polygraphy.util    | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy/util']
+        [V] Model: polygraphy_debug.engine
+        [V] Loaded Module: polygraphy         | Version: 0.35.2 | Path: ['/usr/local/lib/python3.8/dist-packages/polygraphy']
+        [V] Loaded Module: tensorrt           | Version: 8.2.3.0 | Path: ['/usr/local/lib/python3.8/dist-packages/tensorrt']
+        [V] Loaded Module: numpy              | Version: 1.22.2 | Path: ['/usr/local/lib/python3.8/dist-packages/numpy']
+        [V] Loaded Module: polygraphy.util.util
+        [I] Loading input data from onnx_input.json
+        [I] trt-runner-N0-05/27/22-07:24:07     | Activating and starting inference
+        [I] Loading bytes from /workspace/fusai/LeViT/fp16/polygraphy_debug.engine
+        [V] Loading inputs from data loader
+        [I] trt-runner-N0-05/27/22-07:24:07    
+            ---- Inference Input(s) ----
+            {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [V] Runner input metadata is: {input_0 [dtype=float32, shape=(1, 3, 224, 224)]}
+        [I] trt-runner-N0-05/27/22-07:24:07    
+            ---- Inference Output(s) ----
+            {output_0 [dtype=float32, shape=(1, 1000)]}
+        [I] trt-runner-N0-05/27/22-07:24:07     | Completed 1 iteration(s) in 849.2 ms | Average inference time: 849.2 ms.
+        [V] Successfully ran: ['trt-runner-N0-05/27/22-07:24:07']
+        [I] Loading inference results from onnx_res.json
+        [I] Accuracy Comparison | trt-runner-N0-05/27/22-07:24:07 vs. onnxrt-runner-N0-05/27/22-06:22:07
+        [I]     Comparing Output: 'output_0' (dtype=float32, shape=(1, 1000)) with 'output_0' (dtype=float32, shape=(1, 1000)) | Tolerance: [abs=0.01, rel=0.01] | Checking elemwise error
+        [I]         trt-runner-N0-05/27/22-07:24:07: output_0 | Stats: mean=0.025147, std-dev=1.214, var=1.4738, median=-0.005455, min=-3.4473 at (0, 864), max=5.8047 at (0, 539), avg-magnitude=0.91805
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.672) |        200 | ########################
+                        (-0.672, 0.253 ) |        321 | ########################################
+                        (0.253 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         onnxrt-runner-N0-05/27/22-06:22:07: output_0 | Stats: mean=0.025117, std-dev=1.2133, var=1.472, median=-0.0049724, min=-3.4474 at (0, 864), max=5.7916 at (0, 539), avg-magnitude=0.91738
+        [I]             ---- Histogram ----
+                        Bin Range        |  Num Elems | Visualization
+                        (-3.45 , -2.52 ) |         10 | #
+                        (-2.52 , -1.6  ) |         63 | #######
+                        (-1.6  , -0.672) |        199 | ########################
+                        (-0.672, 0.253 ) |        322 | ########################################
+                        (0.253 , 1.18  ) |        278 | ##################################
+                        (1.18  , 2.1   ) |         76 | #########
+                        (2.1   , 3.03  ) |         33 | ####
+                        (3.03  , 3.95  ) |         11 | #
+                        (3.95  , 4.88  ) |          6 | 
+                        (4.88  , 5.8   ) |          2 | 
+        [I]         Error Metrics: output_0
+        [I]             Minimum Required Tolerance: elemwise error | [abs=0.013062] OR [rel=1.1823] (requirements may be lower if both abs/rel tolerances are set)
+        [I]             Absolute Difference | Stats: mean=0.0028163, std-dev=0.0021569, var=4.6524e-06, median=0.0023555, min=3.3975e-06 at (0, 145), max=0.013062 at (0, 539), avg-magnitude=0.0028163
+        [I]                 ---- Histogram ----
+                            Bin Range          |  Num Elems | Visualization
+                            (3.4e-06, 0.00131) |        286 | ########################################
+                            (0.00131, 0.00262) |        267 | #####################################
+                            (0.00262, 0.00392) |        192 | ##########################
+                            (0.00392, 0.00523) |        120 | ################
+                            (0.00523, 0.00653) |         72 | ##########
+                            (0.00653, 0.00784) |         32 | ####
+                            (0.00784, 0.00914) |         17 | ##
+                            (0.00914, 0.0105 ) |          7 | 
+                            (0.0105 , 0.0118 ) |          3 | 
+                            (0.0118 , 0.0131 ) |          4 | 
+        [I]             Relative Difference | Stats: mean=0.013346, std-dev=0.07066, var=0.0049928, median=0.0031878, min=2.7479e-06 at (0, 550), max=1.1823 at (0, 504), avg-magnitude=0.013346
+        [I]                 ---- Histogram ----
+                            Bin Range         |  Num Elems | Visualization
+                            (2.75e-06, 0.118) |        988 | ########################################
+                            (0.118   , 0.236) |          6 | 
+                            (0.236   , 0.355) |          0 | 
+                            (0.355   , 0.473) |          2 | 
+                            (0.473   , 0.591) |          0 | 
+                            (0.591   , 0.709) |          0 | 
+                            (0.709   , 0.828) |          0 | 
+                            (0.828   , 0.946) |          0 | 
+                            (0.946   , 1.06 ) |          3 | 
+                            (1.06    , 1.18 ) |          1 | 
+        [E]         FAILED | Difference exceeds tolerance (rel=0.01, abs=0.01)
+        [E]     FAILED | Mismatched outputs: ['output_0']
+[38;5;9m[E]     ========== CAPTURED STDERR ==========
+        [!] FAILED | Command: /usr/local/bin/polygraphy run polygraphy_debug.engine --trt --load-outputs onnx_res.json --load-inputs onnx_input.json --abs 1e-2 -v --rel 1e-2[0m
+[I]     Moving ./polygraphy_debug.engine to ./art-dir/bad/polygraphy_debug_05-27-22_07-15-53_N11_ret1.engine
+[38;5;9m[E]     FAILED | Iteration 11[0m
+[38;5;10m[I] To achieve acceptable accuracy, try running the first 320 layer(s) in higher precision[0m
+[38;5;10m[I] Finished 11 iteration(s) | Passed: 4/11 | Pass Rate: 36.36363636363637%[0m
