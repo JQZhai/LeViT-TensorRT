@@ -19,7 +19,7 @@ LeViT original repo：[_LeViT_](https://github.com/facebookresearch/LeViT) \
       img4.jpeg
 ```
 2.environments\
-Use this image as a baseline for your TensorRT environment.
+As for X86 platform use this image as a baseline for your TensorRT environment.
 ```
 nvidia-docker pull registry.cn-hangzhou.aliyuncs.com/trt2022/dev
 ```
@@ -40,12 +40,16 @@ $ pip install -r requirment.txt
 [_LeViT-384_](https://dl.fbaipublicfiles.com/LeViT/LeViT-384-9bdaf2e2.pth) 
 
 ## Export to ONNX and Build TensorRT Engine
-1.Evaluate the accuracy of the Pytorch pretrained model.
+1.Download the __Levit__ pretrained model from Model Zoo.Evaluate the accuracy of the Pytorch pretrained model.
 ```bash
 $ python main.py --eval --model LeViT_256 --data-path /path/to/imagenet
 ```
 2.`export.py` exports a pytorch model to onnx format.
 ```bash
-$ python export.py --model <model name>
+$ python export.py --model <model name> --finetune path/to/pth.file
 ```
-
+3. Build the TensorRT engine using `trtexec`.  
+```bash
+$ trtexec --onnx=path/to/onnx.file --buildOnly  --saveEngine=path/to/engine.file --workspace=4096
+```  
+For fp16 mode, fp16 cannot store very large and very small numbers like fp32. So we let some nodes fall back to fp32 mode to ensure the correctness of the final output.
