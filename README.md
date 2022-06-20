@@ -18,11 +18,11 @@ LeViT original repo：[_LeViT_](https://github.com/facebookresearch/LeViT) \
     class/2
       img4.jpeg
 ```
-2.environments
+2.environments\
+Use this image as a baseline for your TensorRT environment.
 ```
 nvidia-docker pull registry.cn-hangzhou.aliyuncs.com/trt2022/dev
 ```
-Use this image as a baseline for your TensorRT environment.
 ```bash
 $ git clone https://github.com/JQZhai/LeViT-TensorRT.git
 ```
@@ -38,4 +38,14 @@ $ pip install -r requirment.txt
 [_LeViT-192_](https://dl.fbaipublicfiles.com/LeViT/LeViT-192-92712e41.pth)
 [_LeViT-256_](https://dl.fbaipublicfiles.com/LeViT/LeViT-256-13b5763e.pth)
 [_LeViT-384_](https://dl.fbaipublicfiles.com/LeViT/LeViT-384-9bdaf2e2.pth) 
+
+## Export to ONNX and Build TensorRT Engine
+1.Evaluate the accuracy of the Pytorch pretrained model.
+```bash
+$ python main.py --eval --model LeViT_256 --data-path /path/to/imagenet
+```
+2.`export.py` exports a pytorch model to onnx format.
+```bash
+$ python export.py --model <model name>
+```
 
