@@ -52,4 +52,21 @@ $ python export.py --model <model name> --finetune path/to/pth.file
 ```bash
 $ trtexec --onnx=path/to/onnx.file --buildOnly  --saveEngine=path/to/engine.file --workspace=4096
 ```  
-For fp16 mode, fp16 cannot store very large and very small numbers like fp32. So we let some nodes fall back to fp32 mode to ensure the correctness of the final output.
+For fp16 mode, fp16 cannot store very large and very small numbers like fp32. So we let some nodes fall back to fp32 mode to ensure the correctness of the final output.Keep the same input as the onnx format model, and use the output in onnx fp32 mode as the standard to calculate the error.
+```bash
+$ polygraphy debug precision ../LeViT-128S.onnx \
+-v --fp16 --workspace 28G --no-remove-intermediate --log-file ./log_file.json \
+--trt-min-shapes 'input_0:[1,3,224,224]' \
+--trt-opt-shapes 'input_0:[1,3,224,224]' \
+--trt-max-shapes 'input_0:[1,3,224,224]' \
+-p fp32 --mode bisect --dir forward --show-output \
+--artifacts ./polygraphy_debug.engine --art-dir ./art-dir \
+--check \
+polygraphy run polygraphy_debug.engine \
+--trt --load-outputs onnx_res.json --load-inputs onnx_input.json \
+--abs 1e-2 -v --rel 1e-2
+```  
+We can use the trtexec to test the throughput of the TensorRT engine.
+```bash
+$ trtexec --loadEngine=path/to/engine.file
+``` 
