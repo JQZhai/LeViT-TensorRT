@@ -3,7 +3,7 @@ The goal of this project is to accelerate the deployment of __LeViT__ networks u
 ## Overview
 As the current visual Transformer with the fastest inference speed, LeViT is significantly better than existing CNNs and visual Transformers in terms of speed/accuracy trade-offs, such as ViT, DeiT, etc., and the top-1 accuracy rate reaches 80%. On CPU, Lower LeViT 3.3x faster than EfficientNet, 2x faster on gpu and nearly 10x faster on arm. It has high application value in scenarios with limited computing power.
 ## Setup 
-LeViT original repo：[_LeViT_](https://github.com/facebookresearch/LeViT) 
+LeViT original repo：[_LeViT_](https://github.com/facebookresearch/LeViT) \
 1.Data preparation
 ```
 /path/to/imagenet/
@@ -23,9 +23,19 @@ LeViT original repo：[_LeViT_](https://github.com/facebookresearch/LeViT)
 nvidia-docker pull registry.cn-hangzhou.aliyuncs.com/trt2022/dev
 ```
 Use this image as a baseline for your TensorRT environment.
-```
-bash
+```bash
 $ git clone https://github.com/JQZhai/LeViT-TensorRT.git
 ```
-Model download address used in this project：[_LeViT-128S_](https://dl.fbaipublicfiles.com/LeViT/LeViT-128S-96703c44.pth) 
+```bash
+$ cd LeViT-TensorRT
+```
+```bash
+$ pip install -r requirment.txt
+```
+3.Model Zoo\
+[_LeViT-128S_](https://dl.fbaipublicfiles.com/LeViT/LeViT-128S-96703c44.pth)
+[_LeViT-128_](https://dl.fbaipublicfiles.com/LeViT/LeViT-128-b88c2750.pth)
+[_LeViT-192_](https://dl.fbaipublicfiles.com/LeViT/LeViT-192-92712e41.pth)
+[_LeViT-256_](https://dl.fbaipublicfiles.com/LeViT/LeViT-256-13b5763e.pth)
+[_LeViT-384_](https://dl.fbaipublicfiles.com/LeViT/LeViT-384-9bdaf2e2.pth) 
 
