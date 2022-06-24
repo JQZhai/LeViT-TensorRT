@@ -55,11 +55,17 @@ $ python main.py --eval --model LeViT_128S --data-path /path/to/imagenet
 ```bash
 $ python export.py --model <model name> --finetune path/to/pth_file
 ```
-3. Build the TensorRT engine using `trtexec`.  
+3.Build the TensorRT engine using `trtexec`.  
 ```bash
 $ trtexec --onnx=path/to/onnx_file --buildOnly  --saveEngine=path/to/engine_file --workspace=4096
 ```  
 For fp16 mode, fp16 cannot store very large and very small numbers like fp32. So we let some nodes fall back to fp32 mode to ensure the correctness of the final output.Keep the same input as the onnx format model, and __use the output in onnx fp32 mode as the standard to calculate the error__.
+```bash
+polygraphy run ../LeViT-128S.onnx \
+--onnxrt -v --workspace=28G --fp16 \
+--input-shapes 'input_0:[1,3,224,224]' --onnx-outputs mark all \
+--save-inputs onnx_input.json --save-outputs onnx_res.json
+```
 ```bash
 $ polygraphy debug precision ../LeViT-128S.onnx \
 -v --fp16 --workspace 28G --no-remove-intermediate --log-file ./log_file.json \
@@ -92,7 +98,12 @@ __QAT__ \
 ```$ python AutoQAT.py```
 ```$ python QATexport.py```
 
-4. `trt/eval_onnxrt.py` aims to evalute the accuracy of the Onnx model.
+ You can use the `trtexec` to test the throughput of the TensorRT engine.
+ ```bash
+ $ trtexec --loadEngine=./weights/swin_tiny_patch4_window7_224_batch16.engine
+ ``` 
+ 
+4.`trt/eval_onnxrt.py` aims to evalute the accuracy of the Onnx model.
 ```bash
 $ python trt/eval_onnxrt.py --eval --resume path/to/onnx_file --data-path ../imagenet_1k --batch-size 32
 ```  
@@ -106,10 +117,12 @@ $ python trt/eval_onnxrt.py --eval --resume path/to/onnx_file --data-path ../ima
 
 ## Speed Test of TensorRT engine (Xavier NX, TensorRT 8.4.0) ##
   
-| LeVit(V100) | FP32 | FP16 | INT8, QAT | INT8 PTQ
-| :---: | :---: | :---: | :---: |
-| batchsize = 1 |  d|  d|
-| batchsize = 16 |d  |d |
-| batchsize = 64 |d  |d |
-| batchsize = 256 |d  |d |
+| LeVit(V100) | FP32 | FP16 | INT8, QAT | INT8 PTQ | FP16 with DLA |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| batchsize=1 | 242.334 qps | 287.315 qps | 294.565 qps | 235.711 qps | 81.6333 qps |
 
+## Result:
+1.Under the condition of guaranteed accuracy, compared with fp32 mode, fp16 mode is 18.56% faster, and int8 QAT is 21.55% faster.\
+2.In order to ensure the accuracy of the output, in the fp16 mode, some nodes return to the fp32 mode for calculation, which will introduce some data format conversion overhead, resulting in a performance improvement of less than two times.
+3.The performance improvement of the int8 QAT mode is much greater than that of the jetson platform on the dGPU condition, which may be related to the hardware.
+4.Regarding the jetson-specific DLA hardware acceleration, the final result is a negative optimization. The main reason is that LeVit is a transformer model, which actually contains only a few convolution operations. In addition, there are many operations in the network that cannot be parsed by DLA, which causes the entire network to be cut into many sub-networks, which exceeds the maximum number of sub-networks supported by DLA. The data being passed back and forth between the DLA and the GPU is the main reason for the huge drop in inference speed.
