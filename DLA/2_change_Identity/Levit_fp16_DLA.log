@@ -1,0 +1,471 @@
+&&&& RUNNING TensorRT.trtexec [TensorRT v8400] # /usr/src/tensorrt/bin/trtexec --onnx=../ModifyModel_1.onnx --saveEngine=Levit_fp16_DLA.engine --fp16 --exportProfile=Levit_fp16_DLA.json --useDLACore=0 --allowGPUFallback --useSpinWait --separateProfileRun
+[06/16/2022-22:12:55] [I] === Model Options ===
+[06/16/2022-22:12:55] [I] Format: ONNX
+[06/16/2022-22:12:55] [I] Model: ../ModifyModel_1.onnx
+[06/16/2022-22:12:55] [I] Output:
+[06/16/2022-22:12:55] [I] === Build Options ===
+[06/16/2022-22:12:55] [I] Max batch: explicit batch
+[06/16/2022-22:12:55] [I] Memory Pools: workspace: default, dlaSRAM: default, dlaLocalDRAM: default, dlaGlobalDRAM: default
+[06/16/2022-22:12:55] [I] minTiming: 1
+[06/16/2022-22:12:55] [I] avgTiming: 8
+[06/16/2022-22:12:55] [I] Precision: FP32+FP16
+[06/16/2022-22:12:55] [I] LayerPrecisions: 
+[06/16/2022-22:12:55] [I] Calibration: 
+[06/16/2022-22:12:55] [I] Refit: Disabled
+[06/16/2022-22:12:55] [I] Sparsity: Disabled
+[06/16/2022-22:12:55] [I] Safe mode: Disabled
+[06/16/2022-22:12:55] [I] DirectIO mode: Disabled
+[06/16/2022-22:12:55] [I] Restricted mode: Disabled
+[06/16/2022-22:12:55] [I] Build only: Disabled
+[06/16/2022-22:12:55] [I] Save engine: Levit_fp16_DLA.engine
+[06/16/2022-22:12:55] [I] Load engine: 
+[06/16/2022-22:12:55] [I] Profiling verbosity: 0
+[06/16/2022-22:12:55] [I] Tactic sources: Using default tactic sources
+[06/16/2022-22:12:55] [I] timingCacheMode: local
+[06/16/2022-22:12:55] [I] timingCacheFile: 
+[06/16/2022-22:12:55] [I] Input(s)s format: fp32:CHW
+[06/16/2022-22:12:55] [I] Output(s)s format: fp32:CHW
+[06/16/2022-22:12:55] [I] Input build shapes: model
+[06/16/2022-22:12:55] [I] Input calibration shapes: model
+[06/16/2022-22:12:55] [I] === System Options ===
+[06/16/2022-22:12:55] [I] Device: 0
+[06/16/2022-22:12:55] [I] DLACore: 0(With GPU fallback)
+[06/16/2022-22:12:55] [I] Plugins:
+[06/16/2022-22:12:55] [I] === Inference Options ===
+[06/16/2022-22:12:55] [I] Batch: Explicit
+[06/16/2022-22:12:55] [I] Input inference shapes: model
+[06/16/2022-22:12:55] [I] Iterations: 10
+[06/16/2022-22:12:55] [I] Duration: 3s (+ 200ms warm up)
+[06/16/2022-22:12:55] [I] Sleep time: 0ms
+[06/16/2022-22:12:55] [I] Idle time: 0ms
+[06/16/2022-22:12:55] [I] Streams: 1
+[06/16/2022-22:12:55] [I] ExposeDMA: Disabled
+[06/16/2022-22:12:55] [I] Data transfers: Enabled
+[06/16/2022-22:12:55] [I] Spin-wait: Enabled
+[06/16/2022-22:12:55] [I] Multithreading: Disabled
+[06/16/2022-22:12:55] [I] CUDA Graph: Disabled
+[06/16/2022-22:12:55] [I] Separate profiling: Enabled
+[06/16/2022-22:12:55] [I] Time Deserialize: Disabled
+[06/16/2022-22:12:55] [I] Time Refit: Disabled
+[06/16/2022-22:12:55] [I] Inputs:
+[06/16/2022-22:12:55] [I] === Reporting Options ===
+[06/16/2022-22:12:55] [I] Verbose: Disabled
+[06/16/2022-22:12:55] [I] Averages: 10 inferences
+[06/16/2022-22:12:55] [I] Percentile: 99
+[06/16/2022-22:12:55] [I] Dump refittable layers:Disabled
+[06/16/2022-22:12:55] [I] Dump output: Disabled
+[06/16/2022-22:12:55] [I] Profile: Disabled
+[06/16/2022-22:12:55] [I] Export timing to JSON file: 
+[06/16/2022-22:12:55] [I] Export output to JSON file: 
+[06/16/2022-22:12:55] [I] Export profile to JSON file: Levit_fp16_DLA.json
+[06/16/2022-22:12:55] [I] 
+[06/16/2022-22:12:55] [I] === Device Information ===
+[06/16/2022-22:12:55] [I] Selected Device: Xavier
+[06/16/2022-22:12:55] [I] Compute Capability: 7.2
+[06/16/2022-22:12:55] [I] SMs: 6
+[06/16/2022-22:12:55] [I] Compute Clock Rate: 1.109 GHz
+[06/16/2022-22:12:55] [I] Device Global Memory: 7504 MiB
+[06/16/2022-22:12:55] [I] Shared Memory per SM: 96 KiB
+[06/16/2022-22:12:55] [I] Memory Bus Width: 256 bits (ECC disabled)
+[06/16/2022-22:12:55] [I] Memory Clock Rate: 1.109 GHz
+[06/16/2022-22:12:55] [I] 
+[06/16/2022-22:12:55] [I] TensorRT version: 8.4.0
+[06/16/2022-22:12:58] [I] [TRT] [MemUsageChange] Init CUDA: CPU +206, GPU +0, now: CPU 231, GPU 3251 (MiB)
+[06/16/2022-22:13:02] [I] [TRT] [MemUsageChange] Init builder kernel library: CPU +141, GPU +180, now: CPU 391, GPU 3444 (MiB)
+[06/16/2022-22:13:02] [I] Start parsing network model
+[06/16/2022-22:13:02] [I] [TRT] ----------------------------------------------------------------
+[06/16/2022-22:13:02] [I] [TRT] Input filename:   ../ModifyModel_1.onnx
+[06/16/2022-22:13:02] [I] [TRT] ONNX IR version:  0.0.8
+[06/16/2022-22:13:02] [I] [TRT] Opset version:    12
+[06/16/2022-22:13:02] [I] [TRT] Producer name:    pytorch
+[06/16/2022-22:13:02] [I] [TRT] Producer version: 1.12.0
+[06/16/2022-22:13:02] [I] [TRT] Domain:           
+[06/16/2022-22:13:02] [I] [TRT] Model version:    0
+[06/16/2022-22:13:02] [I] [TRT] Doc string:       
+[06/16/2022-22:13:02] [I] [TRT] ----------------------------------------------------------------
+[06/16/2022-22:13:03] [I] Finish parsing network model
+[06/16/2022-22:13:06] [I] [TRT] ---------- Layers Running on DLA ----------
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[Conv_12]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[Mul_14...Conv_15]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[Mul_17...Conv_18]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[Mul_20...Conv_21]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_376 + (Unnamed Layer* 34) [Shuffle] + Mul_43...onnx::Add_378 + (Unnamed Layer* 37) [Shuffle] + Add_45]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_436 + (Unnamed Layer* 96) [Shuffle] + Mul_83...onnx::Add_438 + (Unnamed Layer* 99) [Shuffle] + Add_85]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_536 + (Unnamed Layer* 171) [Shuffle] + Mul_141...onnx::Add_538 + (Unnamed Layer* 174) [Shuffle] + Add_143]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_596 + (Unnamed Layer* 232) [Shuffle] + Mul_180...onnx::Add_598 + (Unnamed Layer* 235) [Shuffle] + Add_182]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_656 + (Unnamed Layer* 294) [Shuffle] + Mul_220...onnx::Add_658 + (Unnamed Layer* 297) [Shuffle] + Add_222]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_716 + (Unnamed Layer* 356) [Shuffle] + Mul_260...onnx::Add_718 + (Unnamed Layer* 359) [Shuffle] + Add_262]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_816 + (Unnamed Layer* 431) [Shuffle] + Mul_318...onnx::Add_818 + (Unnamed Layer* 434) [Shuffle] + Add_320]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_876 + (Unnamed Layer* 492) [Shuffle] + Mul_357...onnx::Add_878 + (Unnamed Layer* 495) [Shuffle] + Add_359]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_936 + (Unnamed Layer* 554) [Shuffle] + Mul_397...onnx::Add_938 + (Unnamed Layer* 557) [Shuffle] + Add_399]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_996 + (Unnamed Layer* 616) [Shuffle] + Mul_437...onnx::Add_998 + (Unnamed Layer* 619) [Shuffle] + Add_439]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[onnx::Mul_1056 + (Unnamed Layer* 678) [Shuffle] + Mul_477...onnx::Add_1058 + (Unnamed Layer* 681) [Shuffle] + Add_479]}
+[06/16/2022-22:13:06] [I] [TRT] [DlaLayer] {ForeignNode[BatchNormalization_506...Gemm_507]}
+[06/16/2022-22:13:06] [I] [TRT] ---------- Layers Running on GPU ----------
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(HardSigmoid_13)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(HardSigmoid_16)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(HardSigmoid_19)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONSTANT: onnx::MatMul_1108 + (Unnamed Layer* 17) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Reshape_29 + Transpose_30
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_31
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Flatten_32 + (Unnamed Layer* 21) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SCALE: BatchNormalization_33
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 23) [Shuffle] + Reshape_35 + Reshape_36
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_38
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_40
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_41
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_39
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 39) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_46
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 41) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_47
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_48 + Reshape_49
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_50), Mul_51)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_52
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_52 + BatchNormalization_54
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 54) [Shuffle] + Reshape_56
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_57
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_58
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_58 + BatchNormalization_60
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 64) [Shuffle] + Reshape_62
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_63), Mul_64)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_65
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_65 + BatchNormalization_67
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 75) [Shuffle] + Reshape_69
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_70
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_71
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_71 + BatchNormalization_73
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 85) [Shuffle] + Reshape_75 + Reshape_76
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_78
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_80
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_81
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_79
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 101) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_86
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 103) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_87
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_88 + Reshape_89
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_90), Mul_91)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_92
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_92 + BatchNormalization_94
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 116) [Shuffle] + Reshape_96
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_97
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_98
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_98 + BatchNormalization_100
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 126) [Shuffle] + Reshape_102
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_103), Mul_104)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_105
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_105 + BatchNormalization_107
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 137) [Shuffle] + Reshape_109
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_110
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONSTANT: onnx::MatMul_1149 + (Unnamed Layer* 155) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_111
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_111 + BatchNormalization_113
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Reshape_119
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SLICE: Slice_124
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SLICE: Slice_129
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Reshape_130
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_131
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Flatten_132 + (Unnamed Layer* 162) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SCALE: BatchNormalization_133
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 149) [Shuffle] + Reshape_115 + Reshape_116
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_138
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 164) [Shuffle] + Reshape_135 + Reshape_136 + Transpose_137
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_139
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_118
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 176) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_144
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 178) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_145
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_146 + Reshape_147
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_148), Mul_149)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_150
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_150 + BatchNormalization_152
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONSTANT: onnx::MatMul_1160 + (Unnamed Layer* 194) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 191) [Shuffle] + Reshape_154
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_155
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Flatten_156 + (Unnamed Layer* 198) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SCALE: BatchNormalization_157
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 200) [Shuffle] + Reshape_159
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_160), Mul_161)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_162
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_162 + BatchNormalization_164
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 211) [Shuffle] + Reshape_166
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_167
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_168
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_168 + BatchNormalization_170
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 221) [Shuffle] + Reshape_172 + Reshape_173
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_175
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_177
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_178
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_176
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 237) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_183
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 239) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_184
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_185 + Reshape_186
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_187), Mul_188)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_189
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_189 + BatchNormalization_191
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 252) [Shuffle] + Reshape_193
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_194
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_195
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_195 + BatchNormalization_197
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 262) [Shuffle] + Reshape_199
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_200), Mul_201)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_202
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_202 + BatchNormalization_204
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 273) [Shuffle] + Reshape_206
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_207
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_208
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_208 + BatchNormalization_210
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 283) [Shuffle] + Reshape_212 + Reshape_213
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_215
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_217
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_218
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_216
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 299) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_223
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 301) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_224
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_225 + Reshape_226
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_227), Mul_228)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_229
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_229 + BatchNormalization_231
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 314) [Shuffle] + Reshape_233
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_234
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_235
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_235 + BatchNormalization_237
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 324) [Shuffle] + Reshape_239
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_240), Mul_241)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_242
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_242 + BatchNormalization_244
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 335) [Shuffle] + Reshape_246
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_247
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_248
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_248 + BatchNormalization_250
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 345) [Shuffle] + Reshape_252 + Reshape_253
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_255
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_257
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_258
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_256
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 361) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_263
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 363) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_264
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_265 + Reshape_266
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_267), Mul_268)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_269
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_269 + BatchNormalization_271
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 376) [Shuffle] + Reshape_273
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_274
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_275
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_275 + BatchNormalization_277
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 386) [Shuffle] + Reshape_279
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_280), Mul_281)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_282
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_282 + BatchNormalization_284
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 397) [Shuffle] + Reshape_286
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_287
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONSTANT: onnx::MatMul_1216 + (Unnamed Layer* 415) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_288
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_288 + BatchNormalization_290
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Reshape_296
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SLICE: Slice_301
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SLICE: Slice_306
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Reshape_307
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_308
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Flatten_309 + (Unnamed Layer* 422) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SCALE: BatchNormalization_310
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 409) [Shuffle] + Reshape_292 + Reshape_293
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_315
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 424) [Shuffle] + Reshape_312 + Reshape_313 + Transpose_314
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_316
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_295
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 436) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_321
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 438) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_322
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_323 + Reshape_324
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_325), Mul_326)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_327
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_327 + BatchNormalization_329
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONSTANT: onnx::MatMul_1227 + (Unnamed Layer* 454) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 451) [Shuffle] + Reshape_331
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_332
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Flatten_333 + (Unnamed Layer* 458) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SCALE: BatchNormalization_334
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 460) [Shuffle] + Reshape_336
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_337), Mul_338)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_339
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_339 + BatchNormalization_341
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 471) [Shuffle] + Reshape_343
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_344
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_345
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_345 + BatchNormalization_347
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 481) [Shuffle] + Reshape_349 + Reshape_350
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_352
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_354
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_355
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_353
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 497) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_360
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 499) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_361
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_362 + Reshape_363
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_364), Mul_365)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_366
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_366 + BatchNormalization_368
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 512) [Shuffle] + Reshape_370
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_371
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_372
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_372 + BatchNormalization_374
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 522) [Shuffle] + Reshape_376
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_377), Mul_378)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_379
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_379 + BatchNormalization_381
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 533) [Shuffle] + Reshape_383
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_384
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_385
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_385 + BatchNormalization_387
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 543) [Shuffle] + Reshape_389 + Reshape_390
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_392
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_394
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_395
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_393
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 559) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_400
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 561) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_401
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_402 + Reshape_403
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_404), Mul_405)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_406
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_406 + BatchNormalization_408
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 574) [Shuffle] + Reshape_410
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_411
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_412
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_412 + BatchNormalization_414
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 584) [Shuffle] + Reshape_416
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_417), Mul_418)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_419
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_419 + BatchNormalization_421
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 595) [Shuffle] + Reshape_423
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_424
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_425
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_425 + BatchNormalization_427
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 605) [Shuffle] + Reshape_429 + Reshape_430
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_432
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_434
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_435
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_433
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 621) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_440
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 623) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_441
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_442 + Reshape_443
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_444), Mul_445)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_446
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_446 + BatchNormalization_448
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 636) [Shuffle] + Reshape_450
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_451
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_452
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_452 + BatchNormalization_454
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 646) [Shuffle] + Reshape_456
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_457), Mul_458)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_459
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_459 + BatchNormalization_461
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 657) [Shuffle] + Reshape_463
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_464
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_465
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_465 + BatchNormalization_467
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 667) [Shuffle] + Reshape_469 + Reshape_470
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_472
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_474
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_475
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_473
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 683) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SOFTMAX: Softmax_480
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 685) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] MATRIX_MULTIPLY: MatMul_481
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: Transpose_482 + Reshape_483
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_484), Mul_485)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_486
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_486 + BatchNormalization_488
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 698) [Shuffle] + Reshape_490
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_491
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_492
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_492 + BatchNormalization_494
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 708) [Shuffle] + Reshape_496
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] POINTWISE: PWN(PWN(HardSigmoid_497), Mul_498)
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_before_MatMul_499
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] CONVOLUTION: MatMul_499 + BatchNormalization_501
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 719) [Shuffle] + Reshape_503
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] ELEMENTWISE: Add_504
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] REDUCE: ReduceMean_505
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: (Unnamed Layer* 723) [Shuffle]
+[06/16/2022-22:13:06] [I] [TRT] [GpuLayer] SHUFFLE: reshape_after_Gemm_507
+[06/16/2022-22:13:13] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +261, GPU +381, now: CPU 712, GPU 3913 (MiB)
+[06/16/2022-22:13:15] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +83, GPU +134, now: CPU 795, GPU 4047 (MiB)
+[06/16/2022-22:13:15] [I] [TRT] Local timing cache in use. Profiling results in this builder pass will not be stored.
+[06/16/2022-22:18:03] [I] [TRT] Detected 1 inputs and 1 output network tensors.
+[06/16/2022-22:18:03] [I] [TRT] Total Host Persistent Memory: 140192
+[06/16/2022-22:18:03] [I] [TRT] Total Device Persistent Memory: 512
+[06/16/2022-22:18:03] [I] [TRT] Total Scratch Memory: 4194304
+[06/16/2022-22:18:03] [I] [TRT] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 51 MiB, GPU 906 MiB
+[06/16/2022-22:18:04] [I] [TRT] [BlockAssignment] Algorithm ShiftNTopDown took 571.333ms to assign 7 blocks to 446 nodes requiring 5132804 bytes.
+[06/16/2022-22:18:04] [I] [TRT] Total Activation Memory: 5132804
+[06/16/2022-22:18:04] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 1091, GPU 5415 (MiB)
+[06/16/2022-22:18:04] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in building engine: CPU +19, GPU +16, now: CPU 19, GPU 16 (MiB)
+[06/16/2022-22:18:04] [I] Engine built in 309.36 sec.
+[06/16/2022-22:18:04] [I] [TRT] [MemUsageChange] Init CUDA: CPU +0, GPU +0, now: CPU 890, GPU 5420 (MiB)
+[06/16/2022-22:18:04] [I] [TRT] Loaded engine size: 21 MiB
+[06/16/2022-22:18:04] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 902, GPU 5420 (MiB)
+[06/16/2022-22:18:04] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +7, GPU +13, now: CPU 7, GPU 13 (MiB)
+[06/16/2022-22:18:04] [I] Engine deserialized in 0.0582822 sec.
+[06/16/2022-22:18:04] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 902, GPU 5420 (MiB)
+[06/16/2022-22:18:04] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +5, now: CPU 7, GPU 18 (MiB)
+[06/16/2022-22:18:04] [I] Using random values for input input_0
+[06/16/2022-22:18:04] [I] Created input binding for input_0 with dimensions 1x3x224x224
+[06/16/2022-22:18:04] [I] Using random values for output output_0
+[06/16/2022-22:18:04] [I] Created output binding for output_0 with dimensions 1x1000
+[06/16/2022-22:18:04] [I] Starting inference
+[06/16/2022-22:18:08] [I] Warmup completed 1 queries over 200 ms
+[06/16/2022-22:18:08] [I] Timing trace has 229 queries over 3.01625 s
+[06/16/2022-22:18:08] [I] 
+[06/16/2022-22:18:08] [I] === Trace details ===
+[06/16/2022-22:18:08] [I] Trace averages of 10 runs:
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 15.2279 ms - Host latency: 15.3211 ms (enqueue 15.2192 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 14.0989 ms - Host latency: 14.1863 ms (enqueue 14.0912 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 13.756 ms - Host latency: 13.8334 ms (enqueue 13.7536 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 13.8836 ms - Host latency: 13.9723 ms (enqueue 13.8727 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 13.464 ms - Host latency: 13.551 ms (enqueue 13.4587 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 13.0866 ms - Host latency: 13.1728 ms (enqueue 13.0787 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 13.0107 ms - Host latency: 13.0911 ms (enqueue 13.0026 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 13.0137 ms - Host latency: 13.0956 ms (enqueue 13.0082 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 13.033 ms - Host latency: 13.1184 ms (enqueue 13.024 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.8291 ms - Host latency: 12.9117 ms (enqueue 12.8172 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.7294 ms - Host latency: 12.8054 ms (enqueue 12.7223 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 13.0081 ms - Host latency: 13.088 ms (enqueue 13.0005 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.7449 ms - Host latency: 12.8266 ms (enqueue 12.7392 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.6112 ms - Host latency: 12.6846 ms (enqueue 12.6082 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.6877 ms - Host latency: 12.7677 ms (enqueue 12.6812 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.4611 ms - Host latency: 12.5442 ms (enqueue 12.4599 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.5434 ms - Host latency: 12.6297 ms (enqueue 12.5387 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.5498 ms - Host latency: 12.6392 ms (enqueue 12.5455 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.6917 ms - Host latency: 12.7731 ms (enqueue 12.6867 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.7577 ms - Host latency: 12.8441 ms (enqueue 12.7537 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.3379 ms - Host latency: 12.4293 ms (enqueue 12.3341 ms)
+[06/16/2022-22:18:08] [I] Average on 10 runs - GPU latency: 12.3375 ms - Host latency: 12.4172 ms (enqueue 12.327 ms)
+[06/16/2022-22:18:08] [I] 
+[06/16/2022-22:18:08] [I] === Performance summary ===
+[06/16/2022-22:18:08] [I] Throughput: 75.922 qps
+[06/16/2022-22:18:08] [I] Latency: min = 12.1035 ms, max = 17.4131 ms, mean = 13.0979 ms, median = 12.8669 ms, percentile(99%) = 15.4195 ms
+[06/16/2022-22:18:08] [I] Enqueue Time: min = 12.0339 ms, max = 17.3296 ms, mean = 13.0082 ms, median = 12.7672 ms, percentile(99%) = 15.3335 ms
+[06/16/2022-22:18:08] [I] H2D Latency: min = 0.0378418 ms, max = 0.100342 ms, mean = 0.0435624 ms, median = 0.0406494 ms, percentile(99%) = 0.0800781 ms
+[06/16/2022-22:18:08] [I] GPU Compute Time: min = 12.033 ms, max = 17.3333 ms, mean = 13.0146 ms, median = 12.7697 ms, percentile(99%) = 15.3363 ms
+[06/16/2022-22:18:08] [I] D2H Latency: min = 0.0297852 ms, max = 0.102051 ms, mean = 0.0397477 ms, median = 0.0361328 ms, percentile(99%) = 0.090332 ms
+[06/16/2022-22:18:08] [I] Total Host Walltime: 3.01625 s
+[06/16/2022-22:18:08] [I] Total GPU Compute Time: 2.98034 s
+[06/16/2022-22:18:08] [I] Explanations of the performance metrics are printed in the verbose logs.
+[06/16/2022-22:18:08] [I] 
+&&&& PASSED TensorRT.trtexec [TensorRT v8400] # /usr/src/tensorrt/bin/trtexec --onnx=../ModifyModel_1.onnx --saveEngine=Levit_fp16_DLA.engine --fp16 --exportProfile=Levit_fp16_DLA.json --useDLACore=0 --allowGPUFallback --useSpinWait --separateProfileRun

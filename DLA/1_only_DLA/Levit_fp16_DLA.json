@@ -1,0 +1,483 @@
+[
+  { "count" : 238 }
+, { "name" : "input_0 to nvm", "timeMs" : 17.3931, "averageMs" : 0.07308, "percentage" : 0.595368 }
+, { "name" : "{ForeignNode[Conv_12]}", "timeMs" : 71.9667, "averageMs" : 0.302381, "percentage" : 2.46344 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to PWN(HardSigmoid_13)", "timeMs" : 32.5066, "averageMs" : 0.136582, "percentage" : 1.11271 }
+, { "name" : "input_0 copy finish", "timeMs" : 0.627359, "averageMs" : 0.00263596, "percentage" : 0.0214747 }
+, { "name" : "PWN(HardSigmoid_13)", "timeMs" : 4.46083, "averageMs" : 0.018743, "percentage" : 0.152695 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to PWN(HardSigmoid_13)", "timeMs" : 13.8589, "averageMs" : 0.0582305, "percentage" : 0.474392 }
+, { "name" : "input.4 to nvm", "timeMs" : 9.43238, "averageMs" : 0.0396319, "percentage" : 0.322873 }
+, { "name" : "input.4 finish", "timeMs" : 4.0209, "averageMs" : 0.0168945, "percentage" : 0.137636 }
+, { "name" : "{ForeignNode[Mul_14...Conv_15]}", "timeMs" : 107.498, "averageMs" : 0.451673, "percentage" : 3.67969 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to PWN(HardSigmoid_16)", "timeMs" : 24.3859, "averageMs" : 0.102462, "percentage" : 0.834735 }
+, { "name" : "input.4 copy finish", "timeMs" : 5.2097, "averageMs" : 0.0218895, "percentage" : 0.178329 }
+, { "name" : "onnx::Mul_332 finish", "timeMs" : 5.3696, "averageMs" : 0.0225613, "percentage" : 0.183803 }
+, { "name" : "PWN(HardSigmoid_16)", "timeMs" : 4.97258, "averageMs" : 0.0208932, "percentage" : 0.170212 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to PWN(HardSigmoid_16)", "timeMs" : 8.71562, "averageMs" : 0.0366202, "percentage" : 0.298338 }
+, { "name" : "input.16 to nvm", "timeMs" : 7.86979, "averageMs" : 0.0330664, "percentage" : 0.269385 }
+, { "name" : "input.16 finish", "timeMs" : 5.47517, "averageMs" : 0.0230049, "percentage" : 0.187416 }
+, { "name" : "{ForeignNode[Mul_17...Conv_18]}", "timeMs" : 104.347, "averageMs" : 0.438433, "percentage" : 3.57182 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to {ForeignNode[Mul_17...Conv_18]}", "timeMs" : 22.713, "averageMs" : 0.0954328, "percentage" : 0.777471 }
+, { "name" : "input.16 copy finish", "timeMs" : 5.68963, "averageMs" : 0.023906, "percentage" : 0.194757 }
+, { "name" : "onnx::Mul_336 finish", "timeMs" : 5.43817, "averageMs" : 0.0228495, "percentage" : 0.18615 }
+, { "name" : "Reformatted Output Tensor 0 to {ForeignNode[Mul_17...Conv_18]} finish", "timeMs" : 5.49415, "averageMs" : 0.0230846, "percentage" : 0.188066 }
+, { "name" : "PWN(HardSigmoid_19)", "timeMs" : 5.24096, "averageMs" : 0.0220208, "percentage" : 0.179399 }
+, { "name" : "input.28 to nvm", "timeMs" : 5.67517, "averageMs" : 0.0238452, "percentage" : 0.194262 }
+, { "name" : "Reformatting CopyNode for Input Tensor 1 to {ForeignNode[Mul_20...Conv_21]}", "timeMs" : 4.14883, "averageMs" : 0.0174321, "percentage" : 0.142015 }
+, { "name" : "{ForeignNode[Mul_20...Conv_21]}", "timeMs" : 104.174, "averageMs" : 0.437706, "percentage" : 3.5659 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to {ForeignNode[Mul_20...Conv_21]}", "timeMs" : 21.3956, "averageMs" : 0.0898974, "percentage" : 0.732376 }
+, { "name" : "input.28 copy finish", "timeMs" : 5.41846, "averageMs" : 0.0227666, "percentage" : 0.185475 }
+, { "name" : "Reformatted Input Tensor 1 to {ForeignNode[Mul_20...Conv_21]} finish", "timeMs" : 5.52438, "averageMs" : 0.0232117, "percentage" : 0.189101 }
+, { "name" : "Reformatted Output Tensor 0 to {ForeignNode[Mul_20...Conv_21]} finish", "timeMs" : 5.61962, "averageMs" : 0.0236118, "percentage" : 0.192361 }
+, { "name" : "onnx::MatMul_1108 + (Unnamed Layer* 35) [Shuffle]", "timeMs" : 0.957056, "averageMs" : 0.00402124, "percentage" : 0.0327602 }
+, { "name" : "Reshape_29 + Transpose_30", "timeMs" : 7.38928, "averageMs" : 0.0310474, "percentage" : 0.252937 }
+, { "name" : "MatMul_31", "timeMs" : 15.07, "averageMs" : 0.0633194, "percentage" : 0.51585 }
+, { "name" : "Flatten_32 + (Unnamed Layer* 38) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to BatchNormalization_33", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "BatchNormalization_33", "timeMs" : 2.93558, "averageMs" : 0.0123344, "percentage" : 0.100486 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 40) [Shuffle] + Reshape_35 + Reshape_36", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 40) [Shuffle] + Reshape_35 + Reshape_36", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_38", "timeMs" : 2.85369, "averageMs" : 0.0119903, "percentage" : 0.0976826 }
+, { "name" : "Transpose_40", "timeMs" : 4.34278, "averageMs" : 0.018247, "percentage" : 0.148654 }
+, { "name" : "MatMul_41", "timeMs" : 8.7304, "averageMs" : 0.0366823, "percentage" : 0.298843 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to MatMul_41", "timeMs" : 22.8179, "averageMs" : 0.0958736, "percentage" : 0.781063 }
+, { "name" : "{ForeignNode[onnx::Mul_376 + (Unnamed Layer* 52) [Shuffle] + Mul_43...onnx::Add_378 + (Unnamed Layer* 55) [Shuffle] + Add_45]}", "timeMs" : 67.2293, "averageMs" : 0.282476, "percentage" : 2.30127 }
+, { "name" : "Transpose_39", "timeMs" : 5.81299, "averageMs" : 0.0244243, "percentage" : 0.19898 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 57) [Shuffle]", "timeMs" : 80.3143, "averageMs" : 0.337455, "percentage" : 2.74917 }
+, { "name" : "onnx::Mul_375 finish", "timeMs" : 0.58672, "averageMs" : 0.00246521, "percentage" : 0.0200836 }
+, { "name" : "onnx::Softmax_379 finish", "timeMs" : 0.612993, "averageMs" : 0.0025756, "percentage" : 0.0209829 }
+, { "name" : "(Unnamed Layer* 57) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_46", "timeMs" : 10.9896, "averageMs" : 0.0461747, "percentage" : 0.376175 }
+, { "name" : "(Unnamed Layer* 59) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_47", "timeMs" : 6.38208, "averageMs" : 0.0268155, "percentage" : 0.21846 }
+, { "name" : "Transpose_48 + Reshape_49", "timeMs" : 2.00656, "averageMs" : 0.00843092, "percentage" : 0.068685 }
+, { "name" : "PWN(PWN(HardSigmoid_50), Mul_51)", "timeMs" : 1.59053, "averageMs" : 0.0066829, "percentage" : 0.0544442 }
+, { "name" : "reshape_before_MatMul_52", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_52 + BatchNormalization_54", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_52 + BatchNormalization_54", "timeMs" : 3.5728, "averageMs" : 0.0150118, "percentage" : 0.122298 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 71) [Shuffle] + Reshape_56", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 71) [Shuffle] + Reshape_56", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_57", "timeMs" : 1.95859, "averageMs" : 0.00822938, "percentage" : 0.0670431 }
+, { "name" : "reshape_before_MatMul_58", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_58 + BatchNormalization_60", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_58 + BatchNormalization_60", "timeMs" : 4.26547, "averageMs" : 0.0179221, "percentage" : 0.146008 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 81) [Shuffle] + Reshape_62", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 81) [Shuffle] + Reshape_62", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_63), Mul_64)", "timeMs" : 1.88288, "averageMs" : 0.00791126, "percentage" : 0.0644514 }
+, { "name" : "reshape_before_MatMul_65", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_65 + BatchNormalization_67", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_65 + BatchNormalization_67", "timeMs" : 4.55427, "averageMs" : 0.0191356, "percentage" : 0.155894 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 92) [Shuffle] + Reshape_69", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 92) [Shuffle] + Reshape_69", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_70", "timeMs" : 1.38333, "averageMs" : 0.00581231, "percentage" : 0.0473517 }
+, { "name" : "reshape_before_MatMul_71", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_71 + BatchNormalization_73", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_71 + BatchNormalization_73", "timeMs" : 3.53078, "averageMs" : 0.0148352, "percentage" : 0.12086 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 102) [Shuffle] + Reshape_75 + Reshape_76", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 102) [Shuffle] + Reshape_75 + Reshape_76", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_78", "timeMs" : 1.6624, "averageMs" : 0.00698487, "percentage" : 0.0569043 }
+, { "name" : "Transpose_80", "timeMs" : 2.18406, "averageMs" : 0.00917674, "percentage" : 0.074761 }
+, { "name" : "MatMul_81", "timeMs" : 6.10544, "averageMs" : 0.0256531, "percentage" : 0.20899 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to MatMul_81", "timeMs" : 14.3751, "averageMs" : 0.0603997, "percentage" : 0.492064 }
+, { "name" : "{ForeignNode[onnx::Mul_436 + (Unnamed Layer* 114) [Shuffle] + Mul_83...onnx::Add_438 + (Unnamed Layer* 117) [Shuffle] + Add_85]}", "timeMs" : 51.4388, "averageMs" : 0.216129, "percentage" : 1.76076 }
+, { "name" : "Transpose_79", "timeMs" : 5.87091, "averageMs" : 0.0246677, "percentage" : 0.200963 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 119) [Shuffle]", "timeMs" : 79.5663, "averageMs" : 0.334312, "percentage" : 2.72357 }
+, { "name" : "onnx::Mul_435 finish", "timeMs" : 0.590592, "averageMs" : 0.00248148, "percentage" : 0.0202161 }
+, { "name" : "onnx::Softmax_439 finish", "timeMs" : 0.645408, "averageMs" : 0.0027118, "percentage" : 0.0220925 }
+, { "name" : "(Unnamed Layer* 119) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_86", "timeMs" : 10.9383, "averageMs" : 0.0459592, "percentage" : 0.37442 }
+, { "name" : "(Unnamed Layer* 121) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_87", "timeMs" : 6.37782, "averageMs" : 0.0267976, "percentage" : 0.218314 }
+, { "name" : "Transpose_88 + Reshape_89", "timeMs" : 1.9689, "averageMs" : 0.00827267, "percentage" : 0.0673957 }
+, { "name" : "PWN(PWN(HardSigmoid_90), Mul_91)", "timeMs" : 1.56746, "averageMs" : 0.00658595, "percentage" : 0.0536544 }
+, { "name" : "reshape_before_MatMul_92", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_92 + BatchNormalization_94", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_92 + BatchNormalization_94", "timeMs" : 3.54778, "averageMs" : 0.0149066, "percentage" : 0.121441 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 133) [Shuffle] + Reshape_96", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 133) [Shuffle] + Reshape_96", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_97", "timeMs" : 1.90608, "averageMs" : 0.00800874, "percentage" : 0.0652455 }
+, { "name" : "reshape_before_MatMul_98", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_98 + BatchNormalization_100", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_98 + BatchNormalization_100", "timeMs" : 4.24502, "averageMs" : 0.0178362, "percentage" : 0.145308 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 143) [Shuffle] + Reshape_102", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 143) [Shuffle] + Reshape_102", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_103), Mul_104)", "timeMs" : 1.85008, "averageMs" : 0.00777344, "percentage" : 0.0633286 }
+, { "name" : "reshape_before_MatMul_105", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_105 + BatchNormalization_107", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_105 + BatchNormalization_107", "timeMs" : 4.55145, "averageMs" : 0.0191238, "percentage" : 0.155797 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 154) [Shuffle] + Reshape_109", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 154) [Shuffle] + Reshape_109", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_110", "timeMs" : 1.6359, "averageMs" : 0.00687355, "percentage" : 0.0559973 }
+, { "name" : "onnx::MatMul_1149 + (Unnamed Layer* 176) [Shuffle]", "timeMs" : 0.190336, "averageMs" : 0.000799732, "percentage" : 0.00651525 }
+, { "name" : "reshape_before_MatMul_111", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_111 + BatchNormalization_113", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_111 + BatchNormalization_113", "timeMs" : 6.38154, "averageMs" : 0.0268132, "percentage" : 0.218441 }
+, { "name" : "Reshape_119", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Slice_124", "timeMs" : 1.79434, "averageMs" : 0.00753923, "percentage" : 0.0614205 }
+, { "name" : "Slice_129", "timeMs" : 1.39453, "averageMs" : 0.00585936, "percentage" : 0.047735 }
+, { "name" : "Reshape_130", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_131", "timeMs" : 3.28752, "averageMs" : 0.0138131, "percentage" : 0.112533 }
+, { "name" : "Flatten_132 + (Unnamed Layer* 179) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to BatchNormalization_133", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "BatchNormalization_133", "timeMs" : 2.49667, "averageMs" : 0.0104902, "percentage" : 0.0854616 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 164) [Shuffle] + Reshape_115 + Reshape_116", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 164) [Shuffle] + Reshape_115 + Reshape_116", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_138", "timeMs" : 3.31229, "averageMs" : 0.0139172, "percentage" : 0.11338 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 181) [Shuffle] + Reshape_135 + Reshape_136 + Transpose_137", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 181) [Shuffle] + Reshape_135 + Reshape_136 + Transpose_137", "timeMs" : 1.90835, "averageMs" : 0.00801829, "percentage" : 0.0653233 }
+, { "name" : "MatMul_139", "timeMs" : 6.24285, "averageMs" : 0.0262305, "percentage" : 0.213694 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to {ForeignNode[onnx::Mul_536 + (Unnamed Layer* 189) [Shuffle] + Mul_141...onnx::Add_538 + (Unnamed Layer* 192) [Shuffle] + Add_143]}", "timeMs" : 4.21424, "averageMs" : 0.0177069, "percentage" : 0.144254 }
+, { "name" : "{ForeignNode[onnx::Mul_536 + (Unnamed Layer* 189) [Shuffle] + Mul_141...onnx::Add_538 + (Unnamed Layer* 192) [Shuffle] + Add_143]}", "timeMs" : 67.5691, "averageMs" : 0.283904, "percentage" : 2.31291 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to {ForeignNode[onnx::Mul_536 + (Unnamed Layer* 189) [Shuffle] + Mul_141...onnx::Add_538 + (Unnamed Layer* 192) [Shuffle] + Add_143]}", "timeMs" : 26.002, "averageMs" : 0.109252, "percentage" : 0.890054 }
+, { "name" : "Reformatted Input Tensor 0 to {ForeignNode[onnx::Mul_536 + (Unnamed Layer* 189) [Shuffle] + Mul_141...onnx::Add_538 + (Unnamed Layer* 192) [Shuffle] + Add_143]} finish", "timeMs" : 2.49754, "averageMs" : 0.0104938, "percentage" : 0.0854912 }
+, { "name" : "Reformatted Output Tensor 0 to {ForeignNode[onnx::Mul_536 + (Unnamed Layer* 189) [Shuffle] + Mul_141...onnx::Add_538 + (Unnamed Layer* 192) [Shuffle] + Add_143]} finish", "timeMs" : 4.91968, "averageMs" : 0.0206709, "percentage" : 0.168402 }
+, { "name" : "Transpose_118", "timeMs" : 7.77546, "averageMs" : 0.03267, "percentage" : 0.266156 }
+, { "name" : "(Unnamed Layer* 194) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_144", "timeMs" : 6.24324, "averageMs" : 0.0262321, "percentage" : 0.213707 }
+, { "name" : "(Unnamed Layer* 196) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_145", "timeMs" : 8.86912, "averageMs" : 0.0372652, "percentage" : 0.303592 }
+, { "name" : "Transpose_146 + Reshape_147", "timeMs" : 2.25981, "averageMs" : 0.00949499, "percentage" : 0.0773537 }
+, { "name" : "PWN(PWN(HardSigmoid_148), Mul_149)", "timeMs" : 1.81376, "averageMs" : 0.00762084, "percentage" : 0.0620854 }
+, { "name" : "reshape_before_MatMul_150", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_150 + BatchNormalization_152", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_150 + BatchNormalization_152", "timeMs" : 7.07475, "averageMs" : 0.0297258, "percentage" : 0.24217 }
+, { "name" : "onnx::MatMul_1160 + (Unnamed Layer* 212) [Shuffle]", "timeMs" : 0.227648, "averageMs" : 0.000956506, "percentage" : 0.00779245 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 208) [Shuffle] + Reshape_154", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 208) [Shuffle] + Reshape_154", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_155", "timeMs" : 9.39702, "averageMs" : 0.0394833, "percentage" : 0.321662 }
+, { "name" : "Flatten_156 + (Unnamed Layer* 215) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to BatchNormalization_157", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "BatchNormalization_157", "timeMs" : 3.84727, "averageMs" : 0.016165, "percentage" : 0.131693 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 217) [Shuffle] + Reshape_159", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 217) [Shuffle] + Reshape_159", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_160), Mul_161)", "timeMs" : 3.66835, "averageMs" : 0.0154132, "percentage" : 0.125569 }
+, { "name" : "reshape_before_MatMul_162", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_162 + BatchNormalization_164", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_162 + BatchNormalization_164", "timeMs" : 6.43171, "averageMs" : 0.027024, "percentage" : 0.220159 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 228) [Shuffle] + Reshape_166", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 228) [Shuffle] + Reshape_166", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_167", "timeMs" : 2.58893, "averageMs" : 0.0108778, "percentage" : 0.0886195 }
+, { "name" : "reshape_before_MatMul_168", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_168 + BatchNormalization_170", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_168 + BatchNormalization_170", "timeMs" : 6.53622, "averageMs" : 0.0274631, "percentage" : 0.223736 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 238) [Shuffle] + Reshape_172 + Reshape_173", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 238) [Shuffle] + Reshape_172 + Reshape_173", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_175", "timeMs" : 2.99955, "averageMs" : 0.0126032, "percentage" : 0.102675 }
+, { "name" : "Transpose_177", "timeMs" : 3.89802, "averageMs" : 0.0163782, "percentage" : 0.13343 }
+, { "name" : "MatMul_178", "timeMs" : 9.70055, "averageMs" : 0.0407586, "percentage" : 0.332052 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to MatMul_178", "timeMs" : 5.11648, "averageMs" : 0.0214978, "percentage" : 0.175138 }
+, { "name" : "{ForeignNode[onnx::Mul_596 + (Unnamed Layer* 250) [Shuffle] + Mul_180...onnx::Add_598 + (Unnamed Layer* 253) [Shuffle] + Add_182]}", "timeMs" : 76.5132, "averageMs" : 0.321484, "percentage" : 2.61907 }
+, { "name" : "Transpose_176", "timeMs" : 6.44835, "averageMs" : 0.0270939, "percentage" : 0.220728 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 255) [Shuffle]", "timeMs" : 19.8264, "averageMs" : 0.0833041, "percentage" : 0.678661 }
+, { "name" : "onnx::Mul_595 finish", "timeMs" : 5.62518, "averageMs" : 0.0236352, "percentage" : 0.192551 }
+, { "name" : "onnx::Softmax_599 finish", "timeMs" : 5.6929, "averageMs" : 0.0239197, "percentage" : 0.194869 }
+, { "name" : "(Unnamed Layer* 255) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_183", "timeMs" : 4.6159, "averageMs" : 0.0193946, "percentage" : 0.158003 }
+, { "name" : "(Unnamed Layer* 257) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_184", "timeMs" : 12.1696, "averageMs" : 0.0511326, "percentage" : 0.416567 }
+, { "name" : "Transpose_185 + Reshape_186", "timeMs" : 1.68192, "averageMs" : 0.00706689, "percentage" : 0.0575725 }
+, { "name" : "PWN(PWN(HardSigmoid_187), Mul_188)", "timeMs" : 2.06381, "averageMs" : 0.00867146, "percentage" : 0.0706446 }
+, { "name" : "reshape_before_MatMul_189", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_189 + BatchNormalization_191", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_189 + BatchNormalization_191", "timeMs" : 6.47418, "averageMs" : 0.0272024, "percentage" : 0.221612 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 269) [Shuffle] + Reshape_193", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 269) [Shuffle] + Reshape_193", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_194", "timeMs" : 2.88013, "averageMs" : 0.0121014, "percentage" : 0.0985874 }
+, { "name" : "reshape_before_MatMul_195", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_195 + BatchNormalization_197", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_195 + BatchNormalization_197", "timeMs" : 5.79802, "averageMs" : 0.0243614, "percentage" : 0.198467 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 279) [Shuffle] + Reshape_199", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 279) [Shuffle] + Reshape_199", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_200), Mul_201)", "timeMs" : 2.84665, "averageMs" : 0.0119607, "percentage" : 0.0974416 }
+, { "name" : "reshape_before_MatMul_202", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_202 + BatchNormalization_204", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_202 + BatchNormalization_204", "timeMs" : 5.93197, "averageMs" : 0.0249242, "percentage" : 0.203053 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 290) [Shuffle] + Reshape_206", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 290) [Shuffle] + Reshape_206", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_207", "timeMs" : 1.94336, "averageMs" : 0.00816538, "percentage" : 0.0665216 }
+, { "name" : "reshape_before_MatMul_208", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_208 + BatchNormalization_210", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_208 + BatchNormalization_210", "timeMs" : 6.49434, "averageMs" : 0.0272871, "percentage" : 0.222303 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 300) [Shuffle] + Reshape_212 + Reshape_213", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 300) [Shuffle] + Reshape_212 + Reshape_213", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_215", "timeMs" : 2.30077, "averageMs" : 0.00966709, "percentage" : 0.0787558 }
+, { "name" : "Transpose_217", "timeMs" : 4.10387, "averageMs" : 0.0172432, "percentage" : 0.140476 }
+, { "name" : "MatMul_218", "timeMs" : 10.0262, "averageMs" : 0.0421268, "percentage" : 0.343198 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to MatMul_218", "timeMs" : 5.05408, "averageMs" : 0.0212356, "percentage" : 0.173002 }
+, { "name" : "{ForeignNode[onnx::Mul_656 + (Unnamed Layer* 312) [Shuffle] + Mul_220...onnx::Add_658 + (Unnamed Layer* 315) [Shuffle] + Add_222]}", "timeMs" : 74.3729, "averageMs" : 0.312491, "percentage" : 2.5458 }
+, { "name" : "Transpose_216", "timeMs" : 6.62861, "averageMs" : 0.0278513, "percentage" : 0.226899 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 317) [Shuffle]", "timeMs" : 19.4811, "averageMs" : 0.0818533, "percentage" : 0.666842 }
+, { "name" : "onnx::Mul_655 finish", "timeMs" : 5.69216, "averageMs" : 0.0239166, "percentage" : 0.194844 }
+, { "name" : "onnx::Softmax_659 finish", "timeMs" : 5.64413, "averageMs" : 0.0237148, "percentage" : 0.1932 }
+, { "name" : "(Unnamed Layer* 317) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_223", "timeMs" : 4.79174, "averageMs" : 0.0201334, "percentage" : 0.164022 }
+, { "name" : "(Unnamed Layer* 319) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_224", "timeMs" : 11.6243, "averageMs" : 0.0488414, "percentage" : 0.397901 }
+, { "name" : "Transpose_225 + Reshape_226", "timeMs" : 1.7879, "averageMs" : 0.0075122, "percentage" : 0.0612003 }
+, { "name" : "PWN(PWN(HardSigmoid_227), Mul_228)", "timeMs" : 2.20602, "averageMs" : 0.00926898, "percentage" : 0.0755124 }
+, { "name" : "reshape_before_MatMul_229", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_229 + BatchNormalization_231", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_229 + BatchNormalization_231", "timeMs" : 6.44182, "averageMs" : 0.0270665, "percentage" : 0.220505 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 331) [Shuffle] + Reshape_233", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 331) [Shuffle] + Reshape_233", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_234", "timeMs" : 2.90448, "averageMs" : 0.0122037, "percentage" : 0.099421 }
+, { "name" : "reshape_before_MatMul_235", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_235 + BatchNormalization_237", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_235 + BatchNormalization_237", "timeMs" : 5.72711, "averageMs" : 0.0240635, "percentage" : 0.19604 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 341) [Shuffle] + Reshape_239", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 341) [Shuffle] + Reshape_239", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_240), Mul_241)", "timeMs" : 2.88931, "averageMs" : 0.01214, "percentage" : 0.0989018 }
+, { "name" : "reshape_before_MatMul_242", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_242 + BatchNormalization_244", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_242 + BatchNormalization_244", "timeMs" : 6.13984, "averageMs" : 0.0257976, "percentage" : 0.210168 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 352) [Shuffle] + Reshape_246", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 352) [Shuffle] + Reshape_246", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_247", "timeMs" : 1.77165, "averageMs" : 0.0074439, "percentage" : 0.0606439 }
+, { "name" : "reshape_before_MatMul_248", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_248 + BatchNormalization_250", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_248 + BatchNormalization_250", "timeMs" : 6.38016, "averageMs" : 0.0268074, "percentage" : 0.218394 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 362) [Shuffle] + Reshape_252 + Reshape_253", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 362) [Shuffle] + Reshape_252 + Reshape_253", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_255", "timeMs" : 2.23715, "averageMs" : 0.0093998, "percentage" : 0.0765782 }
+, { "name" : "Transpose_257", "timeMs" : 3.97574, "averageMs" : 0.0167048, "percentage" : 0.136091 }
+, { "name" : "MatMul_258", "timeMs" : 9.79203, "averageMs" : 0.041143, "percentage" : 0.335183 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to MatMul_258", "timeMs" : 5.12554, "averageMs" : 0.0215359, "percentage" : 0.175448 }
+, { "name" : "{ForeignNode[onnx::Mul_716 + (Unnamed Layer* 374) [Shuffle] + Mul_260...onnx::Add_718 + (Unnamed Layer* 377) [Shuffle] + Add_262]}", "timeMs" : 73.4745, "averageMs" : 0.308717, "percentage" : 2.51505 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to {ForeignNode[onnx::Mul_716 + (Unnamed Layer* 374) [Shuffle] + Mul_260...onnx::Add_718 + (Unnamed Layer* 377) [Shuffle] + Add_262]}", "timeMs" : 21.3144, "averageMs" : 0.0895563, "percentage" : 0.729597 }
+, { "name" : "onnx::Mul_715 finish", "timeMs" : 6.11366, "averageMs" : 0.0256877, "percentage" : 0.209272 }
+, { "name" : "Reformatted Output Tensor 0 to {ForeignNode[onnx::Mul_716 + (Unnamed Layer* 374) [Shuffle] + Mul_260...onnx::Add_718 + (Unnamed Layer* 377) [Shuffle] + Add_262]} finish", "timeMs" : 5.60406, "averageMs" : 0.0235465, "percentage" : 0.191828 }
+, { "name" : "Transpose_256", "timeMs" : 4.83539, "averageMs" : 0.0203168, "percentage" : 0.165517 }
+, { "name" : "(Unnamed Layer* 379) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_263", "timeMs" : 4.42595, "averageMs" : 0.0185964, "percentage" : 0.151501 }
+, { "name" : "(Unnamed Layer* 381) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_264", "timeMs" : 11.2855, "averageMs" : 0.0474181, "percentage" : 0.386305 }
+, { "name" : "Transpose_265 + Reshape_266", "timeMs" : 1.71789, "averageMs" : 0.00721801, "percentage" : 0.0588037 }
+, { "name" : "PWN(PWN(HardSigmoid_267), Mul_268)", "timeMs" : 2.17229, "averageMs" : 0.00912726, "percentage" : 0.0743579 }
+, { "name" : "reshape_before_MatMul_269", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_269 + BatchNormalization_271", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_269 + BatchNormalization_271", "timeMs" : 6.44336, "averageMs" : 0.0270729, "percentage" : 0.220558 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 393) [Shuffle] + Reshape_273", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 393) [Shuffle] + Reshape_273", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_274", "timeMs" : 2.8967, "averageMs" : 0.012171, "percentage" : 0.0991548 }
+, { "name" : "reshape_before_MatMul_275", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_275 + BatchNormalization_277", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_275 + BatchNormalization_277", "timeMs" : 5.72915, "averageMs" : 0.0240721, "percentage" : 0.19611 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 403) [Shuffle] + Reshape_279", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 403) [Shuffle] + Reshape_279", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_280), Mul_281)", "timeMs" : 2.97277, "averageMs" : 0.0124906, "percentage" : 0.101759 }
+, { "name" : "reshape_before_MatMul_282", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_282 + BatchNormalization_284", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_282 + BatchNormalization_284", "timeMs" : 5.98954, "averageMs" : 0.0251661, "percentage" : 0.205023 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 414) [Shuffle] + Reshape_286", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 414) [Shuffle] + Reshape_286", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_287", "timeMs" : 2.06989, "averageMs" : 0.00869701, "percentage" : 0.0708527 }
+, { "name" : "onnx::MatMul_1216 + (Unnamed Layer* 436) [Shuffle]", "timeMs" : 0.299712, "averageMs" : 0.0012593, "percentage" : 0.0102592 }
+, { "name" : "reshape_before_MatMul_288", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_288 + BatchNormalization_290", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_288 + BatchNormalization_290", "timeMs" : 8.79984, "averageMs" : 0.0369741, "percentage" : 0.30122 }
+, { "name" : "Reshape_296", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Slice_301", "timeMs" : 1.76995, "averageMs" : 0.00743677, "percentage" : 0.0605859 }
+, { "name" : "Slice_306", "timeMs" : 1.6688, "averageMs" : 0.00701176, "percentage" : 0.0571234 }
+, { "name" : "Reshape_307", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_308", "timeMs" : 9.05625, "averageMs" : 0.0380515, "percentage" : 0.309998 }
+, { "name" : "Flatten_309 + (Unnamed Layer* 439) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to BatchNormalization_310", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "BatchNormalization_310", "timeMs" : 4.32624, "averageMs" : 0.0181775, "percentage" : 0.148088 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 424) [Shuffle] + Reshape_292 + Reshape_293", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 424) [Shuffle] + Reshape_292 + Reshape_293", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_315", "timeMs" : 5.10547, "averageMs" : 0.0214516, "percentage" : 0.174761 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 441) [Shuffle] + Reshape_312 + Reshape_313 + Transpose_314", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 441) [Shuffle] + Reshape_312 + Reshape_313 + Transpose_314", "timeMs" : 4.17475, "averageMs" : 0.017541, "percentage" : 0.142903 }
+, { "name" : "MatMul_316", "timeMs" : 13.7757, "averageMs" : 0.057881, "percentage" : 0.471545 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to MatMul_316", "timeMs" : 2.77661, "averageMs" : 0.0116664, "percentage" : 0.0950439 }
+, { "name" : "{ForeignNode[onnx::Mul_816 + (Unnamed Layer* 449) [Shuffle] + Mul_318...onnx::Add_818 + (Unnamed Layer* 452) [Shuffle] + Add_320]}", "timeMs" : 76.5487, "averageMs" : 0.321633, "percentage" : 2.62028 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to {ForeignNode[onnx::Mul_816 + (Unnamed Layer* 449) [Shuffle] + Mul_318...onnx::Add_818 + (Unnamed Layer* 452) [Shuffle] + Add_320]}", "timeMs" : 19.927, "averageMs" : 0.0837269, "percentage" : 0.682106 }
+, { "name" : "onnx::Mul_815 finish", "timeMs" : 6.00345, "averageMs" : 0.0252246, "percentage" : 0.2055 }
+, { "name" : "Reformatted Output Tensor 0 to {ForeignNode[onnx::Mul_816 + (Unnamed Layer* 449) [Shuffle] + Mul_318...onnx::Add_818 + (Unnamed Layer* 452) [Shuffle] + Add_320]} finish", "timeMs" : 5.60896, "averageMs" : 0.0235671, "percentage" : 0.191996 }
+, { "name" : "Transpose_295", "timeMs" : 6.03475, "averageMs" : 0.0253561, "percentage" : 0.206571 }
+, { "name" : "(Unnamed Layer* 454) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_321", "timeMs" : 3.11203, "averageMs" : 0.0130758, "percentage" : 0.106526 }
+, { "name" : "(Unnamed Layer* 456) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_322", "timeMs" : 14.2463, "averageMs" : 0.0598583, "percentage" : 0.487653 }
+, { "name" : "Transpose_323 + Reshape_324", "timeMs" : 2.10198, "averageMs" : 0.00883186, "percentage" : 0.0719513 }
+, { "name" : "PWN(PWN(HardSigmoid_325), Mul_326)", "timeMs" : 1.74102, "averageMs" : 0.00731522, "percentage" : 0.0595956 }
+, { "name" : "reshape_before_MatMul_327", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_327 + BatchNormalization_329", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_327 + BatchNormalization_329", "timeMs" : 7.86153, "averageMs" : 0.0330316, "percentage" : 0.269102 }
+, { "name" : "onnx::MatMul_1227 + (Unnamed Layer* 472) [Shuffle]", "timeMs" : 0.212256, "averageMs" : 0.000891833, "percentage" : 0.00726558 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 468) [Shuffle] + Reshape_331", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 468) [Shuffle] + Reshape_331", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_332", "timeMs" : 7.72128, "averageMs" : 0.0324424, "percentage" : 0.264301 }
+, { "name" : "Flatten_333 + (Unnamed Layer* 475) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to BatchNormalization_334", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "BatchNormalization_334", "timeMs" : 2.45853, "averageMs" : 0.01033, "percentage" : 0.084156 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 477) [Shuffle] + Reshape_336", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 477) [Shuffle] + Reshape_336", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_337), Mul_338)", "timeMs" : 3.04518, "averageMs" : 0.0127949, "percentage" : 0.104237 }
+, { "name" : "reshape_before_MatMul_339", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_339 + BatchNormalization_341", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_339 + BatchNormalization_341", "timeMs" : 8.03594, "averageMs" : 0.0337644, "percentage" : 0.275072 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 488) [Shuffle] + Reshape_343", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 488) [Shuffle] + Reshape_343", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_344", "timeMs" : 1.91974, "averageMs" : 0.00806615, "percentage" : 0.0657133 }
+, { "name" : "reshape_before_MatMul_345", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_345 + BatchNormalization_347", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_345 + BatchNormalization_347", "timeMs" : 6.55385, "averageMs" : 0.0275372, "percentage" : 0.22434 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 498) [Shuffle] + Reshape_349 + Reshape_350", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 498) [Shuffle] + Reshape_349 + Reshape_350", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_352", "timeMs" : 2.21146, "averageMs" : 0.00929183, "percentage" : 0.0756986 }
+, { "name" : "Transpose_354", "timeMs" : 3.73341, "averageMs" : 0.0156866, "percentage" : 0.127795 }
+, { "name" : "MatMul_355", "timeMs" : 10.9151, "averageMs" : 0.0458617, "percentage" : 0.373626 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to MatMul_355", "timeMs" : 1.63501, "averageMs" : 0.00686978, "percentage" : 0.0559667 }
+, { "name" : "{ForeignNode[onnx::Mul_876 + (Unnamed Layer* 510) [Shuffle] + Mul_357...onnx::Add_878 + (Unnamed Layer* 513) [Shuffle] + Add_359]}", "timeMs" : 80.0079, "averageMs" : 0.336168, "percentage" : 2.73869 }
+, { "name" : "Transpose_353", "timeMs" : 4.99879, "averageMs" : 0.0210033, "percentage" : 0.17111 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 515) [Shuffle]", "timeMs" : 19.4085, "averageMs" : 0.0815482, "percentage" : 0.664356 }
+, { "name" : "onnx::Mul_875 finish", "timeMs" : 6.2217, "averageMs" : 0.0261416, "percentage" : 0.21297 }
+, { "name" : "onnx::Softmax_879 finish", "timeMs" : 5.79811, "averageMs" : 0.0243618, "percentage" : 0.198471 }
+, { "name" : "(Unnamed Layer* 515) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_360", "timeMs" : 3.8297, "averageMs" : 0.0160912, "percentage" : 0.131091 }
+, { "name" : "(Unnamed Layer* 517) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_361", "timeMs" : 10.6478, "averageMs" : 0.0447388, "percentage" : 0.364478 }
+, { "name" : "Transpose_362 + Reshape_363", "timeMs" : 1.65245, "averageMs" : 0.00694306, "percentage" : 0.0565637 }
+, { "name" : "PWN(PWN(HardSigmoid_364), Mul_365)", "timeMs" : 2.98842, "averageMs" : 0.0125564, "percentage" : 0.102294 }
+, { "name" : "reshape_before_MatMul_366", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_366 + BatchNormalization_368", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_366 + BatchNormalization_368", "timeMs" : 6.11264, "averageMs" : 0.0256834, "percentage" : 0.209237 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 529) [Shuffle] + Reshape_370", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 529) [Shuffle] + Reshape_370", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_371", "timeMs" : 3.2232, "averageMs" : 0.0135429, "percentage" : 0.110331 }
+, { "name" : "reshape_before_MatMul_372", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_372 + BatchNormalization_374", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_372 + BatchNormalization_374", "timeMs" : 7.83747, "averageMs" : 0.0329306, "percentage" : 0.268278 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 539) [Shuffle] + Reshape_376", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 539) [Shuffle] + Reshape_376", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_377), Mul_378)", "timeMs" : 1.6968, "averageMs" : 0.00712941, "percentage" : 0.0580818 }
+, { "name" : "reshape_before_MatMul_379", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_379 + BatchNormalization_381", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_379 + BatchNormalization_381", "timeMs" : 7.47821, "averageMs" : 0.031421, "percentage" : 0.255981 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 550) [Shuffle] + Reshape_383", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 550) [Shuffle] + Reshape_383", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_384", "timeMs" : 1.68077, "averageMs" : 0.00706205, "percentage" : 0.0575331 }
+, { "name" : "reshape_before_MatMul_385", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_385 + BatchNormalization_387", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_385 + BatchNormalization_387", "timeMs" : 5.73133, "averageMs" : 0.0240812, "percentage" : 0.196185 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 560) [Shuffle] + Reshape_389 + Reshape_390", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 560) [Shuffle] + Reshape_389 + Reshape_390", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_392", "timeMs" : 2.4848, "averageMs" : 0.0104403, "percentage" : 0.0850553 }
+, { "name" : "Transpose_394", "timeMs" : 3.78583, "averageMs" : 0.0159068, "percentage" : 0.12959 }
+, { "name" : "MatMul_395", "timeMs" : 10.3934, "averageMs" : 0.0436696, "percentage" : 0.355768 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to MatMul_395", "timeMs" : 1.31222, "averageMs" : 0.00551355, "percentage" : 0.0449177 }
+, { "name" : "{ForeignNode[onnx::Mul_936 + (Unnamed Layer* 572) [Shuffle] + Mul_397...onnx::Add_938 + (Unnamed Layer* 575) [Shuffle] + Add_399]}", "timeMs" : 78.0221, "averageMs" : 0.327824, "percentage" : 2.67071 }
+, { "name" : "Transpose_393", "timeMs" : 6.69434, "averageMs" : 0.0281275, "percentage" : 0.229149 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 577) [Shuffle]", "timeMs" : 19.6409, "averageMs" : 0.0825248, "percentage" : 0.672312 }
+, { "name" : "onnx::Mul_935 finish", "timeMs" : 6.16265, "averageMs" : 0.0258935, "percentage" : 0.210949 }
+, { "name" : "onnx::Softmax_939 finish", "timeMs" : 5.93347, "averageMs" : 0.0249306, "percentage" : 0.203104 }
+, { "name" : "(Unnamed Layer* 577) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_400", "timeMs" : 4.03718, "averageMs" : 0.016963, "percentage" : 0.138194 }
+, { "name" : "(Unnamed Layer* 579) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_401", "timeMs" : 10.6386, "averageMs" : 0.0447, "percentage" : 0.364161 }
+, { "name" : "Transpose_402 + Reshape_403", "timeMs" : 1.62743, "averageMs" : 0.00683792, "percentage" : 0.0557071 }
+, { "name" : "PWN(PWN(HardSigmoid_404), Mul_405)", "timeMs" : 2.90461, "averageMs" : 0.0122042, "percentage" : 0.0994254 }
+, { "name" : "reshape_before_MatMul_406", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_406 + BatchNormalization_408", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_406 + BatchNormalization_408", "timeMs" : 5.86723, "averageMs" : 0.0246522, "percentage" : 0.200837 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 591) [Shuffle] + Reshape_410", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 591) [Shuffle] + Reshape_410", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_411", "timeMs" : 3.23795, "averageMs" : 0.0136048, "percentage" : 0.110836 }
+, { "name" : "reshape_before_MatMul_412", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_412 + BatchNormalization_414", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_412 + BatchNormalization_414", "timeMs" : 7.75866, "averageMs" : 0.0325994, "percentage" : 0.265581 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 601) [Shuffle] + Reshape_416", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 601) [Shuffle] + Reshape_416", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_417), Mul_418)", "timeMs" : 1.67344, "averageMs" : 0.00703126, "percentage" : 0.0572822 }
+, { "name" : "reshape_before_MatMul_419", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_419 + BatchNormalization_421", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_419 + BatchNormalization_421", "timeMs" : 7.31146, "averageMs" : 0.0307204, "percentage" : 0.250273 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 612) [Shuffle] + Reshape_423", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 612) [Shuffle] + Reshape_423", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_424", "timeMs" : 1.46854, "averageMs" : 0.00617035, "percentage" : 0.0502686 }
+, { "name" : "reshape_before_MatMul_425", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_425 + BatchNormalization_427", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_425 + BatchNormalization_427", "timeMs" : 5.69757, "averageMs" : 0.0239394, "percentage" : 0.195029 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 622) [Shuffle] + Reshape_429 + Reshape_430", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 622) [Shuffle] + Reshape_429 + Reshape_430", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_432", "timeMs" : 2.48147, "averageMs" : 0.0104264, "percentage" : 0.0849414 }
+, { "name" : "Transpose_434", "timeMs" : 3.88013, "averageMs" : 0.0163031, "percentage" : 0.132818 }
+, { "name" : "MatMul_435", "timeMs" : 10.3705, "averageMs" : 0.0435734, "percentage" : 0.354983 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to MatMul_435", "timeMs" : 1.61827, "averageMs" : 0.00679946, "percentage" : 0.0553938 }
+, { "name" : "{ForeignNode[onnx::Mul_996 + (Unnamed Layer* 634) [Shuffle] + Mul_437...onnx::Add_998 + (Unnamed Layer* 637) [Shuffle] + Add_439]}", "timeMs" : 76.4776, "averageMs" : 0.321335, "percentage" : 2.61785 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to {ForeignNode[onnx::Mul_996 + (Unnamed Layer* 634) [Shuffle] + Mul_437...onnx::Add_998 + (Unnamed Layer* 637) [Shuffle] + Add_439]}", "timeMs" : 21.5239, "averageMs" : 0.0904364, "percentage" : 0.736767 }
+, { "name" : "onnx::Mul_995 finish", "timeMs" : 6.03821, "averageMs" : 0.0253706, "percentage" : 0.206689 }
+, { "name" : "Reformatted Output Tensor 0 to {ForeignNode[onnx::Mul_996 + (Unnamed Layer* 634) [Shuffle] + Mul_437...onnx::Add_998 + (Unnamed Layer* 637) [Shuffle] + Add_439]} finish", "timeMs" : 5.59741, "averageMs" : 0.0235185, "percentage" : 0.1916 }
+, { "name" : "Transpose_433", "timeMs" : 4.78019, "averageMs" : 0.0200848, "percentage" : 0.163627 }
+, { "name" : "(Unnamed Layer* 639) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_440", "timeMs" : 3.42099, "averageMs" : 0.0143739, "percentage" : 0.117101 }
+, { "name" : "(Unnamed Layer* 641) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_441", "timeMs" : 9.86813, "averageMs" : 0.0414627, "percentage" : 0.337788 }
+, { "name" : "Transpose_442 + Reshape_443", "timeMs" : 1.51974, "averageMs" : 0.00638548, "percentage" : 0.0520212 }
+, { "name" : "PWN(PWN(HardSigmoid_444), Mul_445)", "timeMs" : 3.3264, "averageMs" : 0.0139765, "percentage" : 0.113863 }
+, { "name" : "reshape_before_MatMul_446", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_446 + BatchNormalization_448", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_446 + BatchNormalization_448", "timeMs" : 5.97459, "averageMs" : 0.0251033, "percentage" : 0.204512 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 653) [Shuffle] + Reshape_450", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 653) [Shuffle] + Reshape_450", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_451", "timeMs" : 3.06224, "averageMs" : 0.0128666, "percentage" : 0.104821 }
+, { "name" : "reshape_before_MatMul_452", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_452 + BatchNormalization_454", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_452 + BatchNormalization_454", "timeMs" : 7.83757, "averageMs" : 0.032931, "percentage" : 0.268282 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 663) [Shuffle] + Reshape_456", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 663) [Shuffle] + Reshape_456", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_457), Mul_458)", "timeMs" : 1.82045, "averageMs" : 0.00764894, "percentage" : 0.0623144 }
+, { "name" : "reshape_before_MatMul_459", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_459 + BatchNormalization_461", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_459 + BatchNormalization_461", "timeMs" : 7.4239, "averageMs" : 0.0311929, "percentage" : 0.254122 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 674) [Shuffle] + Reshape_463", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 674) [Shuffle] + Reshape_463", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_464", "timeMs" : 1.45962, "averageMs" : 0.00613284, "percentage" : 0.049963 }
+, { "name" : "reshape_before_MatMul_465", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_465 + BatchNormalization_467", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_465 + BatchNormalization_467", "timeMs" : 5.77085, "averageMs" : 0.0242473, "percentage" : 0.197537 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 684) [Shuffle] + Reshape_469 + Reshape_470", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 684) [Shuffle] + Reshape_469 + Reshape_470", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Transpose_472", "timeMs" : 2.39024, "averageMs" : 0.010043, "percentage" : 0.0818184 }
+, { "name" : "Transpose_474", "timeMs" : 3.8465, "averageMs" : 0.0161617, "percentage" : 0.131666 }
+, { "name" : "MatMul_475", "timeMs" : 10.2445, "averageMs" : 0.0430443, "percentage" : 0.350673 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to MatMul_475", "timeMs" : 1.53011, "averageMs" : 0.00642904, "percentage" : 0.052376 }
+, { "name" : "{ForeignNode[onnx::Mul_1056 + (Unnamed Layer* 696) [Shuffle] + Mul_477...onnx::Add_1058 + (Unnamed Layer* 699) [Shuffle] + Add_479]}", "timeMs" : 77.775, "averageMs" : 0.326786, "percentage" : 2.66226 }
+, { "name" : "Transpose_473", "timeMs" : 5.06842, "averageMs" : 0.0212959, "percentage" : 0.173493 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 701) [Shuffle]", "timeMs" : 19.3258, "averageMs" : 0.0812008, "percentage" : 0.661526 }
+, { "name" : "onnx::Mul_1055 finish", "timeMs" : 6.0064, "averageMs" : 0.025237, "percentage" : 0.2056 }
+, { "name" : "onnx::Softmax_1059 finish", "timeMs" : 5.95738, "averageMs" : 0.025031, "percentage" : 0.203922 }
+, { "name" : "(Unnamed Layer* 701) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Softmax_480", "timeMs" : 3.83642, "averageMs" : 0.0161194, "percentage" : 0.131321 }
+, { "name" : "(Unnamed Layer* 703) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_481", "timeMs" : 10.6833, "averageMs" : 0.0448878, "percentage" : 0.365692 }
+, { "name" : "Transpose_482 + Reshape_483", "timeMs" : 1.5384, "averageMs" : 0.00646387, "percentage" : 0.0526598 }
+, { "name" : "PWN(PWN(HardSigmoid_484), Mul_485)", "timeMs" : 2.80547, "averageMs" : 0.0117877, "percentage" : 0.0960319 }
+, { "name" : "reshape_before_MatMul_486", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_486 + BatchNormalization_488", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_486 + BatchNormalization_488", "timeMs" : 6.12333, "averageMs" : 0.0257283, "percentage" : 0.209603 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 715) [Shuffle] + Reshape_490", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 715) [Shuffle] + Reshape_490", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_491", "timeMs" : 2.96797, "averageMs" : 0.0124705, "percentage" : 0.101594 }
+, { "name" : "reshape_before_MatMul_492", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_492 + BatchNormalization_494", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_492 + BatchNormalization_494", "timeMs" : 7.72128, "averageMs" : 0.0324423, "percentage" : 0.264301 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 725) [Shuffle] + Reshape_496", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 725) [Shuffle] + Reshape_496", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "PWN(PWN(HardSigmoid_497), Mul_498)", "timeMs" : 1.64026, "averageMs" : 0.00689183, "percentage" : 0.0561463 }
+, { "name" : "reshape_before_MatMul_499", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to MatMul_499 + BatchNormalization_501", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "MatMul_499 + BatchNormalization_501", "timeMs" : 7.36, "averageMs" : 0.0309244, "percentage" : 0.251934 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to (Unnamed Layer* 736) [Shuffle] + Reshape_503", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "(Unnamed Layer* 736) [Shuffle] + Reshape_503", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Add_504", "timeMs" : 1.41898, "averageMs" : 0.00596209, "percentage" : 0.0485719 }
+, { "name" : "ReduceMean_505", "timeMs" : 3.64733, "averageMs" : 0.0153249, "percentage" : 0.124849 }
+, { "name" : "(Unnamed Layer* 741) [Shuffle]", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to (Unnamed Layer* 741) [Shuffle]", "timeMs" : 4.53254, "averageMs" : 0.0190443, "percentage" : 0.15515 }
+, { "name" : "{ForeignNode[BatchNormalization_506...Gemm_507]}", "timeMs" : 78.074, "averageMs" : 0.328042, "percentage" : 2.67249 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to {ForeignNode[BatchNormalization_506...Gemm_507]}", "timeMs" : 22.5913, "averageMs" : 0.0949213, "percentage" : 0.773304 }
+, { "name" : "(Unnamed Layer* 741) [Shuffle]_output finish", "timeMs" : 5.94189, "averageMs" : 0.0249659, "percentage" : 0.203392 }
+, { "name" : "Reformatted Output Tensor 0 to {ForeignNode[BatchNormalization_506...Gemm_507]} finish", "timeMs" : 5.52253, "averageMs" : 0.0232039, "percentage" : 0.189037 }
+, { "name" : "reshape_after_Gemm_507", "timeMs" : 0, "averageMs" : 0, "percentage" : 0 }
+]

@@ -1,0 +1,729 @@
+mec@mec-desktop:~/Downloads/LeViT/DLA$ /usr/src/tensorrt/bin/trtexec --onnx=../LeViT-128S.onnx  --saveEngine=Levit_fp16_DLA.engine --fp16 --exportProfile=Levit_fp16_DLA.json --useDLACore=0 --allowGPUFallback --useSpinWait --verbose --separateProfileRun > Levit_fp16_DLA.log
+[06/15/2022-22:30:15] [W] [TRT] onnx2trt_utils.cpp:363: Your ONNX model has been generated with INT64 weights, while TensorRT does not natively support INT64. Attempting to cast down to INT32.
+[06/15/2022-22:30:15] [W] [TRT] onnx2trt_utils.cpp:391: One or more weights outside the range of INT32 was clamped
+[06/15/2022-22:30:15] [W] [TRT] onnx2trt_utils.cpp:391: One or more weights outside the range of INT32 was clamped
+[06/15/2022-22:30:16] [W] [TRT] onnx2trt_utils.cpp:391: One or more weights outside the range of INT32 was clamped
+[06/15/2022-22:30:16] [W] [TRT] onnx2trt_utils.cpp:391: One or more weights outside the range of INT32 was clamped
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Reshape_1238 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_0 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Reshape_1234 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_1 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_2 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_3 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_4 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_5 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Reshape_1171 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_6 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Reshape_1167 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_7 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_8 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_9 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Reshape_1117 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_10 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Reshape_1113 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Identity_11 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_13: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_13 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_16: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_16 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_19: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_19 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_22 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Slice_26 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Concat_349 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Concat_28: Please explicitly use CAST operator in ONNX model or add an identity layer to convert INT32 to other types for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Concat_28 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_29 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_30 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1108 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 35) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_31: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_31 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_32 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 38) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 40) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_34 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_35 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_36 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_37 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_37_21 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_37_22 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_38 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_39 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_40 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_41: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_41 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_376 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 52) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_378 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 55) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 57) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_46 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 59) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_47: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_47 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_48 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_49 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_50: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_50 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1118 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 66) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_52: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_52 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_53 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 69) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 71) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_55 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_56 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1119 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 76) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_58: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_58 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_59 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 79) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 81) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_61 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_62 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_63: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_63 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1120 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 87) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_65: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_65 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_66 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 90) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 92) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_68 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_69 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1121 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 97) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_71: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_71 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_72 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 100) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 102) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_74 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_75 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_76 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_77 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_77_31 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_77_32 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_78 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_79 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_80 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_81: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_81 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_436 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 114) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_438 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 117) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 119) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_86 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 121) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_87: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_87 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_88 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_89 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_90: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_90 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1131 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 128) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_92: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_92 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_93 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 131) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 133) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_95 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_96 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1132 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 138) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_98: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_98 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_99 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 141) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 143) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_101 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_102 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_103: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_103 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1133 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 149) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_105: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_105 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_106 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 152) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 154) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_108 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_109 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1134 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 159) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_111: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_111 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_112 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 162) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 164) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_114 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_115 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_116 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_117 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_117_41 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_118 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_119 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Slice_124 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Slice_129 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_130 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1149 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 176) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_131: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_131 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_132 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 179) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 181) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_134 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_135 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_136 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_137 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_138 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_139: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_139 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_536 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 189) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_538 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 192) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 194) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_144 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 196) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_145: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_145 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_146 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_147 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_148: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_148 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1159 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 203) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_150: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_150 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_151 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 206) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 208) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_153 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_154 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1160 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 212) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_155: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_155 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_156 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 215) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 217) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_158 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_159 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_160: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_160 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1161 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 223) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_162: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_162 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_163 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 226) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 228) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_165 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_166 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1162 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 233) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_168: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_168 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_169 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 236) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 238) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_171 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_172 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_173 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_174 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_174_60 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_174_61 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_175 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_176 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_177 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_178: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_178 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_596 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 250) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_598 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 253) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 255) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_183 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 257) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_184: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_184 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_185 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_186 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_187: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_187 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1172 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 264) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_189: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_189 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_190 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 267) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 269) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_192 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_193 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1173 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 274) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_195: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_195 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_196 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 277) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 279) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_198 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_199 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_200: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_200 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1174 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 285) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_202: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_202 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_203 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 288) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 290) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_205 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_206 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1175 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 295) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_208: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_208 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_209 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 298) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 300) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_211 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_212 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_213 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_214 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_214_70 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_214_71 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_215 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_216 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_217 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_218: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_218 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_656 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 312) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_658 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 315) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 317) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_223 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 319) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_224: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_224 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_225 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_226 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_227: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_227 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1185 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 326) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_229: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_229 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_230 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 329) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 331) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_232 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_233 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1186 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 336) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_235: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_235 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_236 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 339) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 341) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_238 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_239 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_240: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_240 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1187 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 347) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_242: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_242 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_243 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 350) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 352) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_245 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_246 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1188 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 357) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_248: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_248 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_249 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 360) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 362) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_251 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_252 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_253 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_254 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_254_80 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_254_81 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_255 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_256 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_257 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_258: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_258 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_716 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 374) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_718 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 377) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 379) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_263 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 381) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_264: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_264 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_265 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_266 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_267: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_267 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1198 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 388) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_269: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_269 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_270 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 391) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 393) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_272 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_273 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1199 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 398) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_275: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_275 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_276 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 401) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 403) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_278 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_279 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_280: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_280 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1200 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 409) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_282: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_282 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_283 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 412) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 414) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_285 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_286 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1201 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 419) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_288: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_288 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_289 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 422) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 424) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_291 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_292 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_293 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_294 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_294_90 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_295 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_296 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Slice_301 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Slice_306 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_307 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1216 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 436) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_308: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_308 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_309 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 439) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 441) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_311 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_312 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_313 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_314 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_315 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_316: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_316 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_816 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 449) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_818 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 452) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 454) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_321 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 456) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_322: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_322 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_323 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_324 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_325: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_325 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1226 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 463) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_327: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_327 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_328 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 466) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 468) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_330 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_331 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1227 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 472) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_332: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_332 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_333 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 475) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 477) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_335 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_336 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_337: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_337 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1228 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 483) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_339: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_339 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_340 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 486) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 488) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_342 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_343 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1229 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 493) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_345: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_345 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_346 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 496) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 498) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_348 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_349 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_350 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_351 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_351_109 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_351_110 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_352 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_353 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_354 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_355: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_355 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_876 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 510) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_878 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 513) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 515) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_360 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 517) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_361: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_361 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_362 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_363 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_364: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_364 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1239 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 524) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_366: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_366 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_367 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 527) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 529) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_369 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_370 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1240 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 534) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_372: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_372 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_373 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 537) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 539) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_375 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_376 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_377: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_377 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1241 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 545) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_379: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_379 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_380 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 548) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 550) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_382 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_383 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1242 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 555) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_385: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_385 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_386 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 558) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 560) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_388 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_389 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_390 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_391 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_391_119 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_391_120 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_392 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_393 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_394 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_395: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_395 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_936 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 572) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_938 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 575) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 577) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_400 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 579) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_401: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_401 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_402 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_403 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_404: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_404 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1252 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 586) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_406: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_406 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_407 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 589) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 591) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_409 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_410 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1253 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 596) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_412: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_412 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_413 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 599) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 601) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_415 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_416 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_417: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_417 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1254 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 607) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_419: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_419 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_420 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 610) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 612) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_422 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_423 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1255 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 617) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_425: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_425 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_426 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 620) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 622) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_428 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_429 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_430 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_431 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_431_129 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_431_130 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_432 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_433 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_434 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_435: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_435 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_996 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 634) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_998 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 637) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 639) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_440 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 641) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_441: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_441 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_442 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_443 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_444: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_444 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1265 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 648) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_446: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_446 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_447 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 651) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 653) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_449 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_450 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1266 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 658) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_452: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_452 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_453 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 661) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 663) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_455 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_456 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_457: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_457 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1267 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 669) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_459: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_459 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_460 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 672) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 674) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_462 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_463 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1268 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 679) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_465: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_465 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_466 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 682) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 684) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_468 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_469 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_470 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_471 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_471_139 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Split_471_140 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_472 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_473 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_474 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_475: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_475 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Mul_1056 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 696) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::Add_1058 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 699) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 701) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Softmax_480 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 703) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_481: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_481 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Transpose_482 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_483 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_484: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_484 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1278 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 710) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_486: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_486 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_487 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 713) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 715) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_489 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_490 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1279 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 720) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_492: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_492 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_493 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 723) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 725) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_495 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_496 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [E] Error[10]: HardSigmoid_497: ActivationLayer (with ActivationType = HARD_SIGMOID) not supported for DLA.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer HardSigmoid_497 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer onnx::MatMul_1280 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 731) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] MatMul_499: MatMul is unsupported on DLA, relax constraints or use Convolution layer instead.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer MatMul_499 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Flatten_500 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 734) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 736) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] DLA only supports FP16 and Int8 precision type. Switching Shape_502 device type to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer Reshape_503 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer ReduceMean_505 is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 741) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 743) [Shuffle] is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer head.l.weight is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer head.l.bias is not supported on DLA, falling back to GPU.
+[06/15/2022-22:30:16] [W] [TRT] Default DLA is enabled but layer (Unnamed Layer* 747) [Shuffle] is not supported on DLA, falling back to GPU.
