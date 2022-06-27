@@ -100,7 +100,7 @@ __QAT__ \
 
  You can use the `trtexec` to test the throughput of the TensorRT engine.
  ```bash
- $ trtexec --loadEngine=./weights/swin_tiny_patch4_window7_224_batch16.engine
+ $ trtexec --loadEngine=/path/to/engine——file
  ``` 
  
 4.`trt/eval_onnxrt.py` aims to evalute the accuracy of the Onnx model.
