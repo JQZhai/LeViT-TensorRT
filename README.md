@@ -30,6 +30,7 @@ Jetpack SDK 5.0.1
 ```bash
 $ nvidia-docker pull registry.cn-hangzhou.aliyuncs.com/trt2022/dev
 ```
+  c).common
 ```bash
 $ git clone https://github.com/JQZhai/LeViT-TensorRT.git
 ```
@@ -38,6 +39,15 @@ $ cd LeViT-TensorRT
 ```
 ```bash
 $ pip install -r requirment.txt
+```
+```bash
+$ python -m pip install colored polygraphy --extra-index-url https://pypi.ngc.nvidia.com
+```
+```bash
+$ python3 -m pip install onnx_graphsurgeon --index-url https://pypi.ngc.nvidia.com
+```
+```bash
+$ pip install pytorch-quantization --extra-index-url https://pypi.ngc.nvidia.com
 ```
 3.Model Zoo \
 [_LeViT-128S_](https://dl.fbaipublicfiles.com/LeViT/LeViT-128S-96703c44.pth)
