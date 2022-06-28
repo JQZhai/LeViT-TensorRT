@@ -65,14 +65,18 @@ $ python main.py --eval --model LeViT_128S --data-path /path/to/imagenet
 ```bash
 $ python export.py --model <model name> --finetune path/to/pth_file
 ```
-3.Build the TensorRT engine using `trtexec`.  
+3.`trt/eval_onnxrt.py` aims to evalute the accuracy of the Onnx model.
+```bash
+$ python trt/eval_onnxrt.py --eval --resume path/to/onnx_file --data-path ../imagenet_1k --batch-size 32
+```  
+4.Build the TensorRT engine using `trtexec`.  
 ```bash
 $ trtexec --onnx=path/to/onnx_file --buildOnly  --saveEngine=path/to/engine_file --workspace=4096
 ```  
 For fp16 mode, fp16 cannot store very large and very small numbers like fp32. So we let some nodes fall back to fp32 mode to ensure the correctness of the final output.Keep the same input as the onnx format model, and __use the output in onnx fp32 mode as the standard to calculate the error__.
 ```bash
 polygraphy run ../LeViT-128S.onnx \
---onnxrt -v --workspace=28G --fp16 \
+--onnxrt -v --workspace=28G --fp32 \
 --input-shapes 'input_0:[1,3,224,224]' --onnx-outputs mark all \
 --save-inputs onnx_input.json --save-outputs onnx_res.json
 ```
@@ -110,13 +114,8 @@ __QAT__ \
 
  You can use the `trtexec` to test the throughput of the TensorRT engine.
  ```bash
- $ trtexec --loadEngine=/path/to/engine——file
+ $ trtexec --loadEngine=/path/to/engine_file
  ``` 
- 
-4.`trt/eval_onnxrt.py` aims to evalute the accuracy of the Onnx model.
-```bash
-$ python trt/eval_onnxrt.py --eval --resume path/to/onnx_file --data-path ../imagenet_1k --batch-size 32
-```  
 
 ## Original Model Accuracy Test (V100, TensorRT 8.2.3) ##
   
